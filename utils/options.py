@@ -70,8 +70,8 @@ def args_parser():
     parser.add_argument('--death', type=str, default='magnitude', help='Death mode / pruning mode. Choose from: magnitude, SET, threshold.')
     parser.add_argument('--redistribution', type=str, default='none', help='Redistribution mode. Choose from: momentum, magnitude, nonzeros, or none.')
     parser.add_argument('--death-rate', type=float, default=0.50, help='The pruning rate / death rate used for dynamic sparse training (not used in this paper).')
-    parser.add_argument('--density', type=float, default=0.7, help='The density of the overall sparse network.')
-    parser.add_argument('--density_local', type=float, default=0.99, help='The density of the overall sparse network.')
+    parser.add_argument('--density', type=float, default=1, help='The density of the overall sparse network.')
+    parser.add_argument('--density_local', type=float, default=1, help='The density of the overall sparse network.')
     parser.add_argument('--update_frequency', type=int, default=100, metavar='N', help='how many iterations to train between parameter exploration')
     parser.add_argument('--decay-schedule', type=str, default='cosine', help='The decay schedule for the pruning rate. Default: cosine. Choose from: cosine, linear.')
     parser.add_argument('--multiplier', type=int, default=1, metavar='N',
@@ -81,5 +81,6 @@ def args_parser():
     parser.add_argument('--finetuning',  action='store_true')
     parser.add_argument('--helf_sparse',  action='store_true') 
     parser.add_argument('--density_dr', type=float,  default=0,help="稀疏衰减率")
+    parser.add_argument('--density_fix', type=float,  default=1,help="间隔固定率")
     args = parser.parse_args()
     return args
