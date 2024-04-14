@@ -40,8 +40,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     density_local_store=args.density_local
 
     for iter in range(args.epochs):
-        if args.density_local>0.6 :
-            args.density_local=args.density_local-args.density_dr
+        
+        args.density_local=args.density_local-args.density_dr #线性衰减
         print(args.density_local)
         #if iter > 100 :
             #args.lr=0.01
@@ -127,7 +127,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         if iter % 3 == 1:
             item_acc = test(net_glob, dataset_test, args)  #有修改
             acc.append(item_acc)
-            wandb.log({"epoch":iter,"acc": item_acc})
+            wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local})
             
     
     

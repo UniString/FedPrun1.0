@@ -19,6 +19,37 @@ def add_sparse_args(parser):
     parser.add_argument('--decay-schedule', type=str, default='cosine', help='The decay schedule for the pruning rate. Default: cosine. Choose from: cosine, linear.')
 
 
+def select_elements_uniformly(tensor, ratio):
+    """
+    从给定张量中均匀选中一定比例的元素。
+
+    :param tensor: 输入的张量。
+    :param ratio: 要选中的元素比例。
+    :return: 布尔索引。
+    """
+    # 确定总元素数量
+    total_elements = tensor.size
+    
+    # 计算需要选中的元素数量
+    num_selected = int(np.ceil(total_elements * ratio))
+    
+    # 生成均匀分布的索引
+    indices = np.linspace(0, total_elements - 1, num=num_selected, dtype=int)
+    
+    # 使用np.unravel_index将一维的索引转换为多维的索引
+    multi_dim_indices = np.unravel_index(indices, tensor.shape)
+    
+    # 选取元素
+    #selected_elements = tensor[multi_dim_indices]
+    
+    return multi_dim_indices
+
+
+
+
+
+
+
 class CosineDecay(object):
     def __init__(self, death_rate, T_max, eta_min=0.005, last_epoch=-1):
         self.sgd = optim.SGD(torch.nn.ParameterList([torch.nn.Parameter(torch.zeros(1))]), lr=death_rate)
@@ -373,8 +404,9 @@ class Masking(object):
                 if name in self.masks:
                     #tensor = tensor.to('cpu')
                     if self.args.helf_sparse:
-                        mask = torch.arange(self.masks[name].numel()) % 2 == 0# 首先创建一个和 self.masks[name] 元素数量相同的一维mask
-                        mask = mask.view(self.masks[name].shape)# 然后将这个一维mask reshape成和 self.masks[name] 相同的形状
+                        mask= select_elements_uniformly(self.masks[name],self.args.density_fix)
+                        #mask = torch.arange(self.masks[name].numel()) % 2 == 0# 首先创建一个和 self.masks[name] 元素数量相同的一维mask
+                        #mask = mask.view(self.masks[name].shape)# 然后将这个一维mask reshape成和 self.masks[name] 相同的形状
                         self.masks[name][mask] = 1.0   #固定一半参数
                     tensor.data = tensor.data*self.masks[name]    
                     #tensor = tensor.to('cuda:0')
