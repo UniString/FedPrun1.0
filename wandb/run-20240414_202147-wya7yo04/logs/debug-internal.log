@@ -1,0 +1,5 @@
+2024-04-14 20:21:48,003 INFO    StreamThr :92280 [internal.py:wandb_internal():86] W&B internal server running at pid: 92280, started at: 2024-04-14 20:21:48.003781
+2024-04-14 20:21:48,004 DEBUG   HandlerThread:92280 [handler.py:handle_request():146] handle_request: status
+2024-04-14 20:21:48,006 INFO    WriterThread:92280 [datastore.py:open_for_write():87] open: C:\Users\Matrix\Documents\Code\FedPrun1.0\wandb\run-20240414_202147-wya7yo04\run-wya7yo04.wandb
+2024-04-14 20:21:48,007 DEBUG   SenderThread:92280 [sender.py:send():379] send: header
+2024-04-14 20:21:48,044 DEBUG   SenderThread:92280 [sender.py:send():379] send: run

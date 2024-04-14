@@ -28,8 +28,8 @@ def select_elements_uniformly(tensor, ratio):
     :return: 布尔索引。
     """
     # 确定总元素数量
-    total_elements = tensor.size
-    
+    total_elements = tensor.numel()
+    #print(total_elements, type(total_elements))
     # 计算需要选中的元素数量
     num_selected = int(np.ceil(total_elements * ratio))
     
