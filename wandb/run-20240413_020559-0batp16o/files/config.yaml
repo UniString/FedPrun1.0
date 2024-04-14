@@ -1,0 +1,204 @@
+wandb_version: 1
+
+epochs:
+  desc: null
+  value: 750
+num_users:
+  desc: null
+  value: 100
+frac:
+  desc: null
+  value: 0.1
+local_ep:
+  desc: null
+  value: 5
+local_bs:
+  desc: null
+  value: 50
+bs:
+  desc: null
+  value: 128
+optimizer:
+  desc: null
+  value: sgd
+lr:
+  desc: null
+  value: 0.05
+momentum:
+  desc: null
+  value: 0.5
+split:
+  desc: null
+  value: user
+algorithm:
+  desc: null
+  value: FedAvg
+limit_time:
+  desc: null
+  value: 300000
+model:
+  desc: null
+  value: vgg
+kernel_num:
+  desc: null
+  value: 9
+kernel_sizes:
+  desc: null
+  value: 3,4,5
+norm:
+  desc: null
+  value: batch_norm
+num_filters:
+  desc: null
+  value: 32
+max_pool:
+  desc: null
+  value: 'True'
+use_project_head:
+  desc: null
+  value: 0
+out_dim:
+  desc: null
+  value: 256
+dataset:
+  desc: null
+  value: cifar10
+generate_data:
+  desc: null
+  value: 0
+iid:
+  desc: null
+  value: 1
+noniid_case:
+  desc: null
+  value: 0
+data_beta:
+  desc: null
+  value: 0.5
+num_classes:
+  desc: null
+  value: 10
+num_channels:
+  desc: null
+  value: 3
+gpu:
+  desc: null
+  value: 0
+stopping_rounds:
+  desc: null
+  value: 10
+verbose:
+  desc: null
+  value: false
+seed:
+  desc: null
+  value: 1
+prox_alpha:
+  desc: null
+  value: 0.01
+ensemble_alpha:
+  desc: null
+  value: 0.2
+temperature:
+  desc: null
+  value: 0.5
+model_buffer_size:
+  desc: null
+  value: 1
+pool_option:
+  desc: null
+  value: FIFO
+sim_type:
+  desc: null
+  value: L1
+p:
+  desc: null
+  value: 2.0
+trans_beta:
+  desc: null
+  value: 500
+radius:
+  desc: null
+  value: 4.0
+min_radius:
+  desc: null
+  value: 0.1
+mut_acc_rate:
+  desc: null
+  value: 0.3
+mut_bound:
+  desc: null
+  value: 50
+sparse:
+  desc: null
+  value: true
+fix:
+  desc: null
+  value: true
+sparse_init:
+  desc: null
+  value: ERK
+growth:
+  desc: null
+  value: random
+death:
+  desc: null
+  value: magnitude
+redistribution:
+  desc: null
+  value: none
+death_rate:
+  desc: null
+  value: 0.5
+density:
+  desc: null
+  value: 1.0
+density_local:
+  desc: null
+  value: 0.8
+update_frequency:
+  desc: null
+  value: 100
+decay_schedule:
+  desc: null
+  value: cosine
+multiplier:
+  desc: null
+  value: 1
+exname:
+  desc: null
+  value: '独非独立Avg200+半稀疏0.8  --epoch 750
+
+    python main_fed.py --sparse  --sparse_init ERK --fix --dataset cifar10  --model
+    vgg --algorithm FedAvg --density 1 --density_local 0.8 --lr 0.05  --exname 独非独立Avg200+半稀疏0.8'
+finetuning:
+  desc: null
+  value: false
+helf_sparse:
+  desc: null
+  value: false
+device:
+  desc: null
+  value: cuda:0
+_wandb:
+  desc: null
+  value:
+    python_version: 3.9.17
+    cli_version: 0.15.8
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1712945159.684399
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.9.17
+      5: 0.15.8
+      8:
+      - 5

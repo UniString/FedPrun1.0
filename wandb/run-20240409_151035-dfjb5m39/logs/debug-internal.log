@@ -1,0 +1,21 @@
+2024-04-09 15:10:35,017 INFO    StreamThr :8800 [internal.py:wandb_internal():86] W&B internal server running at pid: 8800, started at: 2024-04-09 15:10:35.017989
+2024-04-09 15:10:35,018 DEBUG   HandlerThread:8800 [handler.py:handle_request():146] handle_request: status
+2024-04-09 15:10:35,020 INFO    WriterThread:8800 [datastore.py:open_for_write():87] open: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240409_151035-dfjb5m39\run-dfjb5m39.wandb
+2024-04-09 15:10:35,021 DEBUG   SenderThread:8800 [sender.py:send():379] send: header
+2024-04-09 15:10:35,021 DEBUG   SenderThread:8800 [sender.py:send():379] send: run
+2024-04-09 15:10:36,337 INFO    SenderThread:8800 [dir_watcher.py:__init__():211] watching files in: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240409_151035-dfjb5m39\files
+2024-04-09 15:10:36,337 INFO    SenderThread:8800 [sender.py:_start_run_threads():1124] run started: dfjb5m39 with start time 1712646635.017988
+2024-04-09 15:10:36,344 DEBUG   HandlerThread:8800 [handler.py:handle_request():146] handle_request: check_version
+2024-04-09 15:10:36,345 DEBUG   SenderThread:8800 [sender.py:send_request():406] send_request: check_version
+2024-04-09 15:10:39,365 DEBUG   HandlerThread:8800 [handler.py:handle_request():146] handle_request: shutdown
+2024-04-09 15:10:39,366 INFO    HandlerThread:8800 [handler.py:finish():866] shutting down handler
+2024-04-09 15:10:39,377 INFO    WriterThread:8800 [datastore.py:close():296] close: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240409_151035-dfjb5m39\run-dfjb5m39.wandb
+2024-04-09 15:10:40,080 INFO    SenderThread:8800 [sender.py:finish():1546] shutting down sender
+2024-04-09 15:10:40,080 INFO    SenderThread:8800 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-09 15:10:40,363 INFO    SenderThread:8800 [dir_watcher.py:finish():388] scan: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240409_151035-dfjb5m39\files
+2024-04-09 15:10:40,363 INFO    SenderThread:8800 [dir_watcher.py:finish():402] scan save: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240409_151035-dfjb5m39\files\config.yaml config.yaml
+2024-04-09 15:10:40,363 INFO    SenderThread:8800 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-09 15:10:40,363 INFO    SenderThread:8800 [file_pusher.py:join():178] waiting for file pusher
+2024-04-09 15:10:41,502 INFO    wandb-upload_0:8800 [upload_job.py:push():131] Uploaded file C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240409_151035-dfjb5m39\files\config.yaml
+2024-04-09 15:10:41,872 INFO    SenderThread:8800 [file_stream.py:finish():614] file stream finish called
+2024-04-09 15:10:42,490 INFO    SenderThread:8800 [file_stream.py:finish():618] file stream finish is done

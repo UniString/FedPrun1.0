@@ -1,0 +1,72 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-04-06T18:51:22.795834",
+    "startedAt": "2024-04-06T18:51:20.027472",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--sparse",
+        "--sparse_init",
+        "ERK",
+        "--fix",
+        "--dataset",
+        "cifar10",
+        "--epoch",
+        "500",
+        "--model",
+        "vgg",
+        "--algorithm",
+        "FedAvg",
+        "--density",
+        "1",
+        "--density_local",
+        "1",
+        "--lr",
+        "0.03",
+        "--exname",
+        "\u975e\u72ec\u7acbAvgPruing\u5fae\u8c03\u6bcf\u6b21",
+        "--iid",
+        "0",
+        "--noniid_case",
+        "5"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\Matrix\\Documents\\Code\\FedMut\\FedMut\\main_fed.py",
+    "codePathLocal": "main_fed.py",
+    "codePath": "main_fed.py",
+    "host": "DESKTOP-TK6S7DO",
+    "username": "Matrix",
+    "executable": "C:\\Users\\Matrix\\.conda\\envs\\flower\\python.exe",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 3500.0,
+        "min": 0.0,
+        "max": 3500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3500.0,
+            "min": 0.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 977.7352447509766,
+            "used": 470.5110664367676
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 31.817611694335938
+    }
+}

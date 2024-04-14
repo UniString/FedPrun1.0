@@ -1,0 +1,79 @@
+2024-04-13 02:14:32,240 INFO    StreamThr :11228 [internal.py:wandb_internal():86] W&B internal server running at pid: 11228, started at: 2024-04-13 02:14:32.239274
+2024-04-13 02:14:32,244 DEBUG   HandlerThread:11228 [handler.py:handle_request():144] handle_request: status
+2024-04-13 02:14:32,248 INFO    WriterThread:11228 [datastore.py:open_for_write():85] open: /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_021432-f2wa7l9c/run-f2wa7l9c.wandb
+2024-04-13 02:14:32,249 DEBUG   SenderThread:11228 [sender.py:send():379] send: header
+2024-04-13 02:14:32,250 DEBUG   SenderThread:11228 [sender.py:send():379] send: run
+2024-04-13 02:14:37,251 DEBUG   HandlerThread:11228 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-13 02:14:42,253 DEBUG   HandlerThread:11228 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-13 02:14:44,717 DEBUG   HandlerThread:11228 [handler.py:handle_request():144] handle_request: shutdown
+2024-04-13 02:14:44,717 INFO    HandlerThread:11228 [handler.py:finish():857] shutting down handler
+2024-04-13 02:14:45,252 INFO    WriterThread:11228 [datastore.py:close():294] close: /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_021432-f2wa7l9c/run-f2wa7l9c.wandb
+2024-04-13 02:15:06,029 INFO    SenderThread:11228 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7f2c84475760>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f2c84475760>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/lib/gql_request.py", line 55, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/requests/adapters.py", line 507, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f2c84475760>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+2024-04-13 21:28:17,327 INFO    SenderThread:11228 [dir_watcher.py:__init__():211] watching files in: /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_021432-f2wa7l9c/files
+2024-04-13 21:28:17,327 INFO    SenderThread:11228 [sender.py:_start_run_threads():1121] run started: f2wa7l9c with start time 1712945672.238593
+2024-04-13 21:28:17,327 INFO    SenderThread:11228 [sender.py:finish():1552] shutting down sender
+2024-04-13 21:28:17,327 INFO    SenderThread:11228 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-13 21:28:18,328 INFO    SenderThread:11228 [dir_watcher.py:finish():388] scan: /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_021432-f2wa7l9c/files
+2024-04-13 21:28:18,329 INFO    SenderThread:11228 [dir_watcher.py:finish():402] scan save: /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_021432-f2wa7l9c/files/config.yaml config.yaml
+2024-04-13 21:28:18,329 INFO    SenderThread:11228 [file_pusher.py:finish():159] shutting down file pusher
+2024-04-13 21:28:18,330 INFO    SenderThread:11228 [file_pusher.py:join():164] waiting for file pusher
+2024-04-13 21:28:19,518 INFO    wandb-upload_0:11228 [upload_job.py:push():131] Uploaded file /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_021432-f2wa7l9c/files/config.yaml
+2024-04-13 21:28:19,832 INFO    SenderThread:11228 [file_stream.py:finish():593] file stream finish called
+2024-04-13 21:28:20,266 INFO    SenderThread:11228 [file_stream.py:finish():597] file stream finish is done

@@ -1,0 +1,27 @@
+2024-04-13 21:45:51,964 INFO    MainThread:65448 [wandb_setup.py:_flush():76] Current SDK version is 0.15.8
+2024-04-13 21:45:51,964 INFO    MainThread:65448 [wandb_setup.py:_flush():76] Configure stats pid to 65448
+2024-04-13 21:45:51,964 INFO    MainThread:65448 [wandb_setup.py:_flush():76] Loading settings from /home/ubuntu/.config/wandb/settings
+2024-04-13 21:45:51,964 INFO    MainThread:65448 [wandb_setup.py:_flush():76] Loading settings from /home/ubuntu/wjh/FedMut/FedMut/wandb/settings
+2024-04-13 21:45:51,964 INFO    MainThread:65448 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-13 21:45:51,964 INFO    MainThread:65448 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-04-13 21:45:51,964 INFO    MainThread:65448 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main_fed.py', 'program': '/home/ubuntu/wjh/FedMut/FedMut/main_fed.py'}
+2024-04-13 21:45:51,965 INFO    MainThread:65448 [wandb_init.py:_log_setup():507] Logging user logs to /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_214551-vdhavm0p/logs/debug.log
+2024-04-13 21:45:51,965 INFO    MainThread:65448 [wandb_init.py:_log_setup():508] Logging internal logs to /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_214551-vdhavm0p/logs/debug-internal.log
+2024-04-13 21:45:51,965 INFO    MainThread:65448 [wandb_init.py:init():547] calling init triggers
+2024-04-13 21:45:51,965 INFO    MainThread:65448 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'epochs': 750, 'num_users': 100, 'frac': 0.1, 'local_ep': 5, 'local_bs': 50, 'bs': 128, 'optimizer': 'sgd', 'lr': 0.03, 'momentum': 0.5, 'split': 'user', 'algorithm': 'FedAvg', 'limit_time': 300000, 'model': 'resnet18', 'kernel_num': 9, 'kernel_sizes': '3,4,5', 'norm': 'batch_norm', 'num_filters': 32, 'max_pool': 'True', 'use_project_head': 0, 'out_dim': 256, 'dataset': 'cifar10', 'generate_data': 0, 'iid': 1, 'noniid_case': 0, 'data_beta': 0.5, 'num_classes': 10, 'num_channels': 3, 'gpu': 0, 'stopping_rounds': 10, 'verbose': False, 'seed': 1, 'prox_alpha': 0.01, 'ensemble_alpha': 0.2, 'temperature': 0.5, 'model_buffer_size': 1, 'pool_option': 'FIFO', 'sim_type': 'L1', 'p': 2.0, 'trans_beta': 500, 'radius': 4.0, 'min_radius': 0.1, 'mut_acc_rate': 0.3, 'mut_bound': 50, 'sparse': True, 'fix': True, 'sparse_init': 'ERK', 'growth': 'random', 'death': 'magnitude', 'redistribution': 'none', 'death_rate': 0.5, 'density': 1.0, 'density_local': 1.0, 'update_frequency': 100, 'decay_schedule': 'cosine', 'multiplier': 1, 'exname': '独立线性衰减半稀疏0.005', 'finetuning': False, 'helf_sparse': False, 'device': device(type='cuda')}
+2024-04-13 21:45:51,966 INFO    MainThread:65448 [wandb_init.py:init():596] starting backend
+2024-04-13 21:45:51,966 INFO    MainThread:65448 [wandb_init.py:init():600] setting up manager
+2024-04-13 21:45:51,970 INFO    MainThread:65448 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-04-13 21:45:51,972 INFO    MainThread:65448 [wandb_init.py:init():606] backend started and connected
+2024-04-13 21:45:51,990 INFO    MainThread:65448 [wandb_init.py:init():697] updated telemetry
+2024-04-13 21:45:51,990 INFO    MainThread:65448 [wandb_init.py:init():730] communicating run to backend with 60.0 second timeout
+2024-04-13 21:45:52,727 ERROR   MainThread:65448 [wandb_init.py:init():756] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2024-04-13 21:45:53,631 ERROR   MainThread:65448 [wandb_init.py:init():1165] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1147, in init
+    run = wi.init()
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 762, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2024-04-13 21:45:54,637 WARNING MsgRouterThr:65448 [router.py:message_loop():77] message_loop has been closed

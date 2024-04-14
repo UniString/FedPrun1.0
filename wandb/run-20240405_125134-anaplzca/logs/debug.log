@@ -1,0 +1,28 @@
+2024-04-05 12:51:34,422 INFO    MainThread:13196 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-04-05 12:51:34,422 INFO    MainThread:13196 [wandb_setup.py:_flush():76] Configure stats pid to 13196
+2024-04-05 12:51:34,422 INFO    MainThread:13196 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Matrix\.config\wandb\settings
+2024-04-05 12:51:34,422 INFO    MainThread:13196 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\settings
+2024-04-05 12:51:34,422 INFO    MainThread:13196 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-05 12:51:34,422 INFO    MainThread:13196 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-04-05 12:51:34,422 INFO    MainThread:13196 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main_fed.py', 'program_abspath': 'C:\\Users\\Matrix\\Documents\\Code\\FedMut\\FedMut\\main_fed.py', 'program': 'C:\\Users\\Matrix\\Documents\\Code\\FedMut\\FedMut\\main_fed.py'}
+2024-04-05 12:51:34,422 INFO    MainThread:13196 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-04-05 12:51:34,422 INFO    MainThread:13196 [wandb_init.py:_log_setup():521] Logging user logs to C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240405_125134-anaplzca\logs\debug.log
+2024-04-05 12:51:34,423 INFO    MainThread:13196 [wandb_init.py:_log_setup():522] Logging internal logs to C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240405_125134-anaplzca\logs\debug-internal.log
+2024-04-05 12:51:34,423 INFO    MainThread:13196 [wandb_init.py:init():561] calling init triggers
+2024-04-05 12:51:34,423 INFO    MainThread:13196 [wandb_init.py:init():568] wandb.init called with sweep_config: {}
+config: {'epochs': 200, 'num_users': 100, 'frac': 0.1, 'local_ep': 5, 'local_bs': 50, 'bs': 128, 'optimizer': 'sgd', 'lr': 0.03, 'momentum': 0.5, 'split': 'user', 'algorithm': 'FedAvg', 'limit_time': 300000, 'model': 'resnet18', 'kernel_num': 9, 'kernel_sizes': '3,4,5', 'norm': 'batch_norm', 'num_filters': 32, 'max_pool': 'True', 'use_project_head': 0, 'out_dim': 256, 'dataset': 'cifar10', 'generate_data': 0, 'iid': 1, 'noniid_case': 0, 'data_beta': 0.5, 'num_classes': 10, 'num_channels': 3, 'gpu': 0, 'stopping_rounds': 10, 'verbose': False, 'seed': 1, 'prox_alpha': 0.01, 'ensemble_alpha': 0.2, 'temperature': 0.5, 'model_buffer_size': 1, 'pool_option': 'FIFO', 'sim_type': 'L1', 'p': 2.0, 'trans_beta': 500, 'radius': 4.0, 'min_radius': 0.1, 'mut_acc_rate': 0.3, 'mut_bound': 50, 'sparse': True, 'fix': True, 'sparse_init': 'ERK', 'growth': 'random', 'death': 'magnitude', 'redistribution': 'none', 'death_rate': 0.5, 'density': 1.0, 'density_local': 0.6, 'update_frequency': 100, 'decay_schedule': 'cosine', 'multiplier': 1, 'device': device(type='cuda', index=0)}
+2024-04-05 12:51:34,423 INFO    MainThread:13196 [wandb_init.py:init():611] starting backend
+2024-04-05 12:51:34,423 INFO    MainThread:13196 [wandb_init.py:init():615] setting up manager
+2024-04-05 12:51:34,428 INFO    MainThread:13196 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-04-05 12:51:34,428 INFO    MainThread:13196 [wandb_init.py:init():623] backend started and connected
+2024-04-05 12:51:34,437 INFO    MainThread:13196 [wandb_init.py:init():715] updated telemetry
+2024-04-05 12:51:34,438 INFO    MainThread:13196 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-04-05 12:51:35,508 ERROR   MainThread:13196 [wandb_init.py:init():774] encountered error: you may not log runs directly to your organization, please try using your team entity (Error 400: Bad Request)
+2024-04-05 12:51:36,154 ERROR   MainThread:13196 [wandb_init.py:init():1199] you may not log runs directly to your organization, please try using your team entity (Error 400: Bad Request)
+Traceback (most recent call last):
+  File "C:\Users\Matrix\.conda\envs\flower\lib\site-packages\wandb\sdk\wandb_init.py", line 1181, in init
+    run = wi.init()
+  File "C:\Users\Matrix\.conda\envs\flower\lib\site-packages\wandb\sdk\wandb_init.py", line 780, in init
+    raise error
+wandb.errors.CommError: you may not log runs directly to your organization, please try using your team entity (Error 400: Bad Request)
+2024-04-05 12:51:37,168 WARNING MsgRouterThr:13196 [router.py:message_loop():77] message_loop has been closed

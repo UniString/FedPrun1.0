@@ -1,0 +1,21 @@
+2024-04-11 12:56:31,567 INFO    StreamThr :37596 [internal.py:wandb_internal():86] W&B internal server running at pid: 37596, started at: 2024-04-11 12:56:31.567158
+2024-04-11 12:56:31,568 DEBUG   HandlerThread:37596 [handler.py:handle_request():146] handle_request: status
+2024-04-11 12:56:31,570 INFO    WriterThread:37596 [datastore.py:open_for_write():87] open: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240411_125631-4e4gcssv\run-4e4gcssv.wandb
+2024-04-11 12:56:31,571 DEBUG   SenderThread:37596 [sender.py:send():379] send: header
+2024-04-11 12:56:31,572 DEBUG   SenderThread:37596 [sender.py:send():379] send: run
+2024-04-11 12:56:32,505 INFO    SenderThread:37596 [dir_watcher.py:__init__():211] watching files in: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240411_125631-4e4gcssv\files
+2024-04-11 12:56:32,505 INFO    SenderThread:37596 [sender.py:_start_run_threads():1124] run started: 4e4gcssv with start time 1712811391.567158
+2024-04-11 12:56:32,514 DEBUG   HandlerThread:37596 [handler.py:handle_request():146] handle_request: check_version
+2024-04-11 12:56:32,514 DEBUG   SenderThread:37596 [sender.py:send_request():406] send_request: check_version
+2024-04-11 12:56:33,404 DEBUG   HandlerThread:37596 [handler.py:handle_request():146] handle_request: shutdown
+2024-04-11 12:56:33,404 INFO    HandlerThread:37596 [handler.py:finish():866] shutting down handler
+2024-04-11 12:56:33,518 INFO    WriterThread:37596 [datastore.py:close():296] close: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240411_125631-4e4gcssv\run-4e4gcssv.wandb
+2024-04-11 12:56:34,400 INFO    SenderThread:37596 [sender.py:finish():1546] shutting down sender
+2024-04-11 12:56:34,400 INFO    SenderThread:37596 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-11 12:56:34,525 INFO    SenderThread:37596 [dir_watcher.py:finish():388] scan: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240411_125631-4e4gcssv\files
+2024-04-11 12:56:34,525 INFO    SenderThread:37596 [dir_watcher.py:finish():402] scan save: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240411_125631-4e4gcssv\files\config.yaml config.yaml
+2024-04-11 12:56:34,525 INFO    SenderThread:37596 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-11 12:56:34,525 INFO    SenderThread:37596 [file_pusher.py:join():178] waiting for file pusher
+2024-04-11 12:56:35,600 INFO    wandb-upload_0:37596 [upload_job.py:push():131] Uploaded file C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240411_125631-4e4gcssv\files\config.yaml
+2024-04-11 12:56:36,063 INFO    SenderThread:37596 [file_stream.py:finish():614] file stream finish called
+2024-04-11 12:56:36,894 INFO    SenderThread:37596 [file_stream.py:finish():618] file stream finish is done

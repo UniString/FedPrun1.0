@@ -1,0 +1,272 @@
+ResNetCifar10(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+)
+********************************************************************************
+Round   0
+********************************************************************************
+Round   1
+Testing accuracy: 61.31
+********************************************************************************
+Round   2
+********************************************************************************
+Round   3
+********************************************************************************
+Round   4
+Testing accuracy: 61.89
+********************************************************************************
+Round   5
+********************************************************************************
+Round   6
+********************************************************************************
+Round   7
+Testing accuracy: 61.16
+********************************************************************************
+Round   8
+********************************************************************************
+Round   9
+********************************************************************************
+Round  10
+Testing accuracy: 61.03
+********************************************************************************
+Round  11
+********************************************************************************
+Round  12
+********************************************************************************
+Round  13
+Testing accuracy: 60.19
+********************************************************************************
+Round  14
+********************************************************************************
+Round  15
+********************************************************************************
+Round  16
+Testing accuracy: 62.09
+********************************************************************************
+Round  17
+********************************************************************************
+Round  18
+********************************************************************************
+Round  19
+Testing accuracy: 62.60
+********************************************************************************
+Round  20
+********************************************************************************
+Round  21
+********************************************************************************
+Round  22
+Testing accuracy: 60.54
+********************************************************************************
+Round  23
+********************************************************************************
+Round  24
+********************************************************************************
+Round  25
+Testing accuracy: 63.08
+********************************************************************************
+Round  26
+********************************************************************************
+Round  27
+********************************************************************************
+Round  28
+Testing accuracy: 61.50
+********************************************************************************
+Round  29
+********************************************************************************
+Round  30
+********************************************************************************
+Round  31
+Testing accuracy: 59.31
+********************************************************************************
+Round  32
+********************************************************************************
+Round  33
+********************************************************************************
+Round  34
+Testing accuracy: 62.04
+********************************************************************************
+Round  35
+********************************************************************************
+Round  36
+********************************************************************************
+Round  37
+Testing accuracy: 61.07
+********************************************************************************
+Round  38
+********************************************************************************
+Round  39
+********************************************************************************
+Round  40
+Testing accuracy: 63.07
+********************************************************************************
+Round  41
+********************************************************************************
+Round  42
+********************************************************************************
+Round  43
+Testing accuracy: 63.25
+********************************************************************************
+Round  44
+********************************************************************************
+Round  45
+********************************************************************************
+Round  46
+Testing accuracy: 62.68
+********************************************************************************
+Round  47
+********************************************************************************
+Round  48
+********************************************************************************
+Round  49
+Testing accuracy: 62.52
+********************************************************************************
+Round  50
+********************************************************************************
+Round  51
+********************************************************************************
+Round  52
+Testing accuracy: 61.80
+********************************************************************************
+Round  53
+********************************************************************************
+Round  54
+********************************************************************************
+Round  55
+Testing accuracy: 62.67
+********************************************************************************
+Round  56
+********************************************************************************
+Round  57
+********************************************************************************
+Round  58
+Testing accuracy: 62.18
+********************************************************************************
+Round  59
+********************************************************************************
+Round  60
+********************************************************************************
+Round  61
+Testing accuracy: 61.49
+********************************************************************************
+Round  62
+********************************************************************************
+Round  63
+********************************************************************************
+Round  64
+Testing accuracy: 62.57
+********************************************************************************
+Round  65
+********************************************************************************
+Round  66
+********************************************************************************
+Round  67
+Testing accuracy: 60.53
+********************************************************************************
+Round  68
+********************************************************************************
+Round  69
+********************************************************************************
+Round  70
+Traceback (most recent call last):
+  File "C:\Users\Matrix\Documents\Code\FedMut\FedMut\main_fed.py", line 332, in <module>
+    FedAvg(net_glob, dataset_train, dataset_test, dict_users)
+  File "C:\Users\Matrix\Documents\Code\FedMut\FedMut\main_fed.py", line 109, in FedAvg
+    w = local.train(net=net_local)#返回参数状态字典
+  File "C:\Users\Matrix\Documents\Code\FedMut\FedMut\models\Update.py", line 49, in train
+    for batch_idx, (images, labels) in enumerate(self.ldr_train):
+  File "C:\Users\Matrix\.conda\envs\flower\lib\site-packages\torch\utils\data\dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "C:\Users\Matrix\.conda\envs\flower\lib\site-packages\torch\utils\data\dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\Matrix\.conda\envs\flower\lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "C:\Users\Matrix\.conda\envs\flower\lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "C:\Users\Matrix\Documents\Code\FedMut\FedMut\models\Update.py", line 23, in __getitem__
+    image, label = self.dataset[self.idxs[item]]
+  File "C:\Users\Matrix\.conda\envs\flower\lib\site-packages\torchvision\datasets\cifar.py", line 118, in __getitem__
+    img = self.transform(img)
+  File "C:\Users\Matrix\.conda\envs\flower\lib\site-packages\torchvision\transforms\transforms.py", line 95, in __call__
+    img = t(img)
+  File "C:\Users\Matrix\.conda\envs\flower\lib\site-packages\torchvision\transforms\transforms.py", line 137, in __call__
+    return F.to_tensor(pic)
+KeyboardInterrupt

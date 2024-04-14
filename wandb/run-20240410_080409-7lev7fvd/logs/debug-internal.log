@@ -1,0 +1,1521 @@
+2024-04-10 08:04:09,253 INFO    StreamThr :5296 [internal.py:wandb_internal():86] W&B internal server running at pid: 5296, started at: 2024-04-10 08:04:09.253477
+2024-04-10 08:04:09,254 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status
+2024-04-10 08:04:09,256 INFO    WriterThread:5296 [datastore.py:open_for_write():87] open: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\run-7lev7fvd.wandb
+2024-04-10 08:04:09,257 DEBUG   SenderThread:5296 [sender.py:send():379] send: header
+2024-04-10 08:04:09,258 DEBUG   SenderThread:5296 [sender.py:send():379] send: run
+2024-04-10 08:04:10,155 INFO    SenderThread:5296 [dir_watcher.py:__init__():211] watching files in: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files
+2024-04-10 08:04:10,155 INFO    SenderThread:5296 [sender.py:_start_run_threads():1124] run started: 7lev7fvd with start time 1712707449.253476
+2024-04-10 08:04:10,162 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: check_version
+2024-04-10 08:04:10,162 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: check_version
+2024-04-10 08:04:13,861 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: run_start
+2024-04-10 08:04:13,878 DEBUG   HandlerThread:5296 [system_info.py:__init__():26] System info init
+2024-04-10 08:04:13,878 DEBUG   HandlerThread:5296 [system_info.py:__init__():41] System info init done
+2024-04-10 08:04:13,878 INFO    HandlerThread:5296 [system_monitor.py:start():194] Starting system monitor
+2024-04-10 08:04:13,879 INFO    SystemMonitor:5296 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-10 08:04:13,879 INFO    HandlerThread:5296 [system_monitor.py:probe():214] Collecting system info
+2024-04-10 08:04:13,881 INFO    SystemMonitor:5296 [interfaces.py:start():190] Started cpu monitoring
+2024-04-10 08:04:13,882 INFO    SystemMonitor:5296 [interfaces.py:start():190] Started disk monitoring
+2024-04-10 08:04:13,882 INFO    SystemMonitor:5296 [interfaces.py:start():190] Started gpu monitoring
+2024-04-10 08:04:13,887 INFO    SystemMonitor:5296 [interfaces.py:start():190] Started memory monitoring
+2024-04-10 08:04:13,896 INFO    SystemMonitor:5296 [interfaces.py:start():190] Started network monitoring
+2024-04-10 08:04:13,898 DEBUG   HandlerThread:5296 [system_info.py:probe():150] Probing system
+2024-04-10 08:04:13,900 DEBUG   HandlerThread:5296 [gitlib.py:_init_repo():56] git repository is invalid
+2024-04-10 08:04:13,900 DEBUG   HandlerThread:5296 [system_info.py:probe():198] Probing system done
+2024-04-10 08:04:13,900 DEBUG   HandlerThread:5296 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.10.12', 'heartbeatAt': '2024-04-10T00:04:13.898606', 'startedAt': '2024-04-10T00:04:09.245479', 'docker': None, 'cuda': None, 'args': ('--sparse', '--sparse_init', 'ERK', '--fix', '--dataset', 'cifar10', '--epoch', '250', '--model', 'resnet18', '--algorithm', 'FedAvg', '--noniid_case', '5', '--iid', '0', '--density', '1', '--density_local', '0.6', '--lr', '0.03', '--finetuning', '--exname', '·Ç¶ÀÁ¢AvgPrun_Î¢µ÷_0.6_aggmut'), 'state': 'running', 'program': 'C:\\Users\\Matrix\\Documents\\Code\\FedMut\\FedMut\\main_fed.py', 'codePathLocal': 'main_fed.py', 'codePath': 'main_fed.py', 'host': 'DESKTOP-TK6S7DO', 'username': 'Matrix', 'executable': 'C:\\Users\\Matrix\\.conda\\envs\\flower\\python.exe', 'cpu_count': 14, 'cpu_count_logical': 20, 'cpu_freq': {'current': 3500.0, 'min': 0.0, 'max': 3500.0}, 'cpu_freq_per_core': [{'current': 3500.0, 'min': 0.0, 'max': 3500.0}], 'disk': {'/': {'total': 977.7352447509766, 'used': 479.9008903503418}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 31.817611694335938}}
+2024-04-10 08:04:13,900 INFO    HandlerThread:5296 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-10 08:04:13,900 INFO    HandlerThread:5296 [system_monitor.py:probe():227] Publishing system info
+2024-04-10 08:04:13,900 DEBUG   HandlerThread:5296 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-04-10 08:04:14,184 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\conda-environment.yaml
+2024-04-10 08:04:16,098 DEBUG   HandlerThread:5296 [system_info.py:_save_conda():222] Saving conda packages done
+2024-04-10 08:04:16,101 INFO    HandlerThread:5296 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-10 08:04:16,106 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:04:16,106 DEBUG   SenderThread:5296 [sender.py:send():379] send: files
+2024-04-10 08:04:16,106 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-04-10 08:04:16,195 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\conda-environment.yaml
+2024-04-10 08:04:16,196 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-metadata.json
+2024-04-10 08:04:16,256 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: python_packages
+2024-04-10 08:04:16,256 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: python_packages
+2024-04-10 08:04:16,257 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:04:16,257 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:04:16,259 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:04:17,029 DEBUG   SenderThread:5296 [sender.py:send():379] send: telemetry
+2024-04-10 08:04:17,126 INFO    wandb-upload_0:5296 [upload_job.py:push():131] Uploaded file C:\Users\Matrix\AppData\Local\Temp\tmpn3jm9mflwandb\bw5cdu89-wandb-metadata.json
+2024-04-10 08:04:17,198 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\requirements.txt
+2024-04-10 08:04:17,198 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:04:19,213 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:04:20,060 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:04:25,088 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:04:30,145 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:04:31,254 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:04:31,254 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:04:31,254 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:04:33,343 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:04:35,149 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:04:40,202 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:04:41,397 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\config.yaml
+2024-04-10 08:04:44,355 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:04:44,356 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:04:44,357 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:04:44,358 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:04:44,420 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:04:45,436 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:04:46,280 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:04:46,280 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:04:46,280 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:04:46,521 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:04:51,550 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:04:56,571 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:04:59,542 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:05:01,274 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:05:01,274 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:05:01,274 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:05:02,505 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:07,517 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:12,801 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:13,633 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:05:13,906 DEBUG   SystemMonitor:5296 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-10 08:05:13,907 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:05:16,269 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:05:16,270 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:05:16,284 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:05:18,544 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:23,574 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:24,437 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:05:24,438 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:05:24,438 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:05:24,439 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:05:24,724 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:05:25,733 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:05:29,476 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:31,280 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:05:31,281 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:05:31,295 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:05:34,552 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:39,864 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:05:40,296 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:43,920 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:05:45,928 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:46,287 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:05:46,288 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:05:46,302 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:05:51,642 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:05:54,040 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:05:57,072 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:01,295 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:06:01,296 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:06:01,310 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:06:02,540 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:04,718 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:06:04,719 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:06:04,719 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:06:04,720 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:06:05,179 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:06:06,182 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:06:07,740 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:12,765 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:13,928 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:06:16,305 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:06:16,305 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:06:16,320 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:06:18,335 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:06:18,538 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:23,574 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:28,625 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:30,454 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:06:31,306 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:06:31,307 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:06:31,322 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:06:34,616 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:39,650 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:43,935 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:06:44,950 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:45,409 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:06:45,410 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:06:45,410 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:06:45,411 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:06:45,654 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:06:46,327 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:06:46,327 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:06:46,328 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:06:47,674 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:06:50,585 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:06:55,760 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:06:56,448 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:01,333 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:07:01,333 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:07:01,334 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:07:01,565 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:07,335 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:07,883 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:07:12,383 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:13,959 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:07:16,339 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:07:16,339 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:07:16,339 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:07:17,585 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:20,115 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:07:20,116 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:07:20,116 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:07:20,117 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:07:21,031 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:07:22,047 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:07:23,150 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:28,198 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:31,328 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:07:31,343 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:07:31,343 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:07:34,006 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:34,188 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:07:39,054 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:43,966 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:07:44,304 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:07:44,978 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:46,337 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:07:46,355 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:07:46,356 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:07:50,637 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:55,676 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:07:58,296 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:07:58,297 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:07:58,297 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:07:58,298 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:07:58,461 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:08:00,489 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:08:01,308 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:01,339 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:08:01,354 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:08:01,354 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:08:06,644 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:12,051 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:12,627 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:08:13,978 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:08:16,349 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:08:16,365 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:08:16,365 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:08:17,688 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:22,752 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:24,772 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:08:27,949 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:31,358 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:08:31,373 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:08:31,373 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:08:33,630 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:36,687 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:08:36,688 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:08:36,688 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:08:36,688 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:08:36,933 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:08:38,711 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:38,953 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:08:43,748 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:43,991 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:08:46,362 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:08:46,376 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:08:46,376 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:08:49,697 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:08:53,090 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:08:55,114 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:00,162 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:01,367 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:09:01,397 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:09:01,397 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:09:03,208 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:09:05,864 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:10,896 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:13,996 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:09:16,017 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:16,374 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:09:16,405 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:09:16,406 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:09:18,064 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:09:18,065 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:09:18,065 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:09:18,066 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:09:18,371 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:09:20,390 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:09:21,084 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:26,114 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:31,149 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:31,382 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:09:31,415 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:09:31,415 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:09:32,537 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:09:36,279 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:41,297 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:44,003 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:09:46,368 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:46,383 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:09:46,413 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:09:46,413 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:09:46,678 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:09:51,735 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:09:56,781 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:00,238 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:10:00,239 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:10:00,239 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:10:00,240 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:10:00,833 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:10:00,833 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:10:01,375 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:10:01,408 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:10:01,408 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:10:02,632 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:07,668 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:12,706 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:14,035 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:10:14,992 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:10:16,376 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:10:16,423 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:10:16,423 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:10:18,715 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:23,737 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:28,818 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:29,171 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:10:31,389 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:10:31,436 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:10:31,437 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:10:34,743 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:39,772 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:42,101 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:10:42,103 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:10:42,103 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:10:42,104 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:10:42,323 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:10:43,333 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:10:44,025 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:10:45,033 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:46,396 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:10:46,441 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:10:46,441 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:10:50,755 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:55,994 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:10:57,488 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:11:01,033 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:01,400 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:11:01,445 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:11:01,445 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:11:06,701 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:11,658 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:11:12,287 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:14,033 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:11:16,420 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:11:16,450 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:11:16,451 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:11:17,686 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:22,720 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:27,029 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:11:27,030 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:11:27,030 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:11:27,031 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:11:27,841 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:11:28,043 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:28,865 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:11:31,434 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:11:31,464 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:11:31,464 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:11:33,721 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:38,764 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:41,018 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:11:44,047 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:11:44,047 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:46,447 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:11:46,480 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:11:46,480 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:11:49,817 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:11:53,173 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:11:55,506 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:00,546 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:01,454 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:12:01,499 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:12:01,499 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:12:05,793 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:06,686 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:12:06,687 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:12:06,687 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:12:06,688 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:12:07,332 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:12:07,333 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:12:11,730 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:14,060 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:12:16,463 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:12:16,509 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:12:16,509 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:12:16,742 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:19,478 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:12:22,460 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:27,481 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:31,472 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:12:31,535 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:12:31,535 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:12:31,626 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:12:32,814 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:37,854 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:42,883 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:44,061 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:12:44,836 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:12:44,837 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:12:44,837 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:12:44,838 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:12:45,795 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:12:45,797 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:12:46,479 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:12:46,540 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:12:46,540 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:12:48,756 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:53,778 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:59,421 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:12:59,951 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:13:01,489 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:13:01,555 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:13:01,555 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:13:04,836 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:09,856 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:14,077 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:13:14,118 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:13:15,092 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:16,486 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:13:16,548 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:13:16,548 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:13:20,865 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:25,900 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:28,079 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:13:28,080 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:13:28,080 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:13:28,080 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:13:28,264 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:13:30,282 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:13:31,108 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:31,491 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:13:31,552 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:13:31,552 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:13:37,094 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:41,412 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:13:42,134 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:44,088 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:13:46,493 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:13:46,556 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:13:46,556 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:13:47,797 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:52,832 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:13:55,558 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:13:58,600 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:01,509 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:14:01,556 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:14:01,556 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:14:03,812 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:08,844 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:10,630 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:14:10,631 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:14:10,631 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:14:10,632 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:14:10,733 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:14:11,740 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:14:14,099 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:14:14,100 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:16,513 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:14:16,574 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:14:16,574 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:14:19,846 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:23,875 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:14:25,641 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:30,692 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:31,525 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:14:31,586 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:14:31,586 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:14:35,905 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:36,015 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:14:40,953 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:44,104 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:14:46,124 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:46,530 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:14:46,592 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:14:46,592 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:14:47,319 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:14:47,320 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:14:47,320 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:14:47,321 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:14:48,133 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:14:48,134 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:14:51,355 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:56,378 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:14:58,259 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:15:01,545 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:15:01,546 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:01,605 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:15:01,605 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:15:06,936 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:10,399 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:15:12,518 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:14,118 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:15:16,546 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:15:16,624 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:15:16,624 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:15:17,870 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:22,891 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:23,140 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:15:23,140 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:15:23,141 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:15:23,141 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:15:23,552 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:15:24,559 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:15:28,176 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:31,560 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:15:31,637 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:15:31,638 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:15:33,953 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:39,808 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:40,747 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:15:44,119 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:15:45,132 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:46,562 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:15:46,639 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:15:46,639 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:15:50,182 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:15:50,857 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:15:55,220 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:00,259 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:01,565 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:16:01,642 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:16:01,643 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:16:04,415 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:16:04,416 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:16:04,416 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:16:04,417 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:16:05,037 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:16:05,417 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:07,056 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:16:10,467 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:14,138 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:16:15,897 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:16,157 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:16:16,572 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:16:16,649 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:16:16,650 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:16:20,906 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:25,929 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:30,963 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:31,577 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:16:31,652 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:16:31,652 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:16:32,340 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:16:36,940 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:41,974 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:44,146 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:16:44,610 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:16:44,611 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:16:44,611 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:16:44,612 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:16:45,497 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:16:46,501 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:16:46,591 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:16:46,667 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:16:46,668 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:16:47,926 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:52,966 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:57,979 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:16:58,616 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:17:01,606 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:17:01,680 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:17:01,680 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:17:03,945 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:09,732 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:10,778 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:17:14,158 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:17:15,173 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:16,607 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:17:16,685 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:17:16,685 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:17:21,023 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:21,760 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:17:21,762 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:17:21,762 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:17:21,763 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:17:21,896 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:17:22,924 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:17:26,805 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:31,612 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:17:31,689 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:17:31,689 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:17:31,901 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:37,634 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:39,084 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:17:42,676 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:44,170 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:17:46,625 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:17:46,687 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:17:46,687 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:17:47,985 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:49,207 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:17:53,124 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:17:58,165 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:01,638 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:18:01,686 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:18:01,686 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:18:02,569 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:18:02,570 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:18:02,570 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:18:02,570 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:18:03,352 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:18:03,582 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:05,380 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:18:08,623 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:13,668 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:14,178 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:18:16,652 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:18:16,698 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:18:16,698 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:18:17,528 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:18:18,958 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:23,999 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:29,799 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:30,689 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:18:31,655 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:18:31,717 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:18:31,718 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:18:35,048 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:40,090 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:43,842 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:18:43,843 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:18:43,843 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:18:43,844 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:18:43,862 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:18:44,183 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:18:44,865 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:18:45,186 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:46,663 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:18:46,723 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:18:46,723 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:18:51,008 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:56,328 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:18:57,019 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:19:01,372 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:01,666 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:19:01,725 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:19:01,725 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:19:07,089 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:09,155 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:19:12,662 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:14,212 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:19:16,667 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:19:16,728 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:19:16,729 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:19:18,041 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:22,427 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:19:22,428 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:19:22,428 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:19:22,429 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:19:23,317 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:19:23,317 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:19:23,437 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:28,479 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:31,680 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:19:31,748 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:19:31,748 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:19:34,013 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:37,482 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:19:39,991 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:44,222 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:19:45,230 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:46,678 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:19:46,755 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:19:46,755 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:19:47,601 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:19:51,000 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:19:56,034 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:01,055 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:01,687 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:20:01,747 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:20:01,747 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:20:02,090 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:20:02,091 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:20:02,091 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:20:02,092 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:20:02,777 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:20:03,792 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:20:06,126 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:11,170 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:14,224 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:20:16,698 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:20:16,699 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:16,760 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:20:16,761 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:20:17,969 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:20:22,016 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:27,058 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:31,708 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:20:31,784 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:20:31,784 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:20:32,114 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:20:33,010 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:38,056 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:43,096 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:44,229 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:20:44,947 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:20:44,948 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:20:44,948 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:20:44,949 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:20:45,276 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:20:45,276 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:20:46,714 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:20:46,792 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:20:46,792 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:20:48,115 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:53,140 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:58,565 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:20:59,417 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:21:01,724 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:21:01,815 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:21:01,816 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:21:04,092 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:09,124 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:13,557 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:21:14,234 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:21:14,235 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:16,732 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:21:16,812 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:21:16,812 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:21:20,050 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:25,088 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:26,506 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:21:26,508 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:21:26,508 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:21:26,509 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:21:26,698 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:21:27,720 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:21:30,545 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:31,759 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:21:31,819 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:21:31,820 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:21:36,094 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:39,839 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:21:41,340 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:44,242 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:21:46,730 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:21:46,731 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:46,833 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:21:46,834 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:21:52,120 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:21:56,029 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:21:57,438 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:01,745 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:22:01,837 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:22:01,838 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:22:03,138 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:06,885 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:22:06,886 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:22:06,886 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:22:06,887 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:22:07,159 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:22:08,175 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:22:08,902 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:13,935 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:14,246 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:22:16,749 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:22:16,863 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:22:16,863 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:22:19,163 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:22,336 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:22:24,456 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:29,501 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:31,756 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:22:31,865 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:22:31,865 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:22:34,470 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:22:35,185 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:40,218 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:44,254 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:22:45,265 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:46,400 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:22:46,401 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:22:46,401 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:22:46,402 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:22:46,596 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:22:46,764 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:22:46,872 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:22:46,872 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:22:48,625 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:22:51,121 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:22:56,154 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:00,757 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:23:01,779 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:23:01,780 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:01,887 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:23:01,887 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:23:07,204 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:12,230 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:13,912 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:23:14,269 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:23:16,785 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:23:16,894 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:23:16,895 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:23:18,201 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:23,218 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:27,401 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:23:27,402 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:23:27,402 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:23:27,403 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:23:28,067 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:23:28,067 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:23:28,404 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:31,796 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:23:31,902 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:23:31,902 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:23:34,190 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:39,233 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:40,197 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:23:44,282 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:23:44,282 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:46,808 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:23:46,917 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:23:46,917 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:23:50,211 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:23:54,396 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:23:55,841 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:00,870 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:01,825 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:24:01,932 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:24:01,933 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:24:06,233 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:06,885 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:24:06,885 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:24:06,886 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:24:06,886 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:24:07,569 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:24:08,584 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:24:11,920 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:14,287 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:24:16,840 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:24:16,950 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:24:16,950 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:24:17,246 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:20,696 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:24:22,805 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:27,849 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:31,847 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:24:31,953 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:24:31,961 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:24:32,847 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:24:33,214 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:38,264 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:43,316 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:44,295 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:24:46,618 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:24:46,629 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:24:46,629 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:24:46,630 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:24:46,851 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:24:46,960 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:24:46,960 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:24:46,977 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:24:49,001 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:24:49,231 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:24:54,281 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:00,260 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:01,136 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:25:01,863 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:25:01,956 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:25:01,957 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:25:05,280 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:10,304 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:13,261 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:25:14,310 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:25:15,325 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:16,865 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:25:16,958 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:25:16,958 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:25:21,199 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:25,944 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:25:25,945 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:25:25,945 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:25:25,946 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:25:26,411 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:25:26,412 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:25:26,953 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:31,871 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:25:31,962 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:25:31,963 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:25:32,154 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:37,194 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:40,573 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:25:42,221 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:44,312 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:25:46,884 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:25:46,977 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:25:46,977 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:25:48,213 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:52,720 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:25:54,160 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:25:59,186 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:01,893 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:26:01,986 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:26:01,986 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:26:04,244 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:04,846 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:26:04,847 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:26:04,847 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:26:04,848 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:26:04,864 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:26:06,882 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:26:09,910 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:14,315 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:26:15,321 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:16,904 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:26:16,998 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:26:16,999 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:26:19,027 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:26:21,211 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:26,232 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:31,833 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:31,912 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:26:32,004 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:26:32,004 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:26:33,174 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:26:37,275 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:42,319 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:43,375 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:26:43,375 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:26:43,376 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:26:43,376 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:26:44,303 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:26:44,319 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:26:45,311 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:26:46,909 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:26:47,002 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:26:47,002 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:26:48,220 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:53,256 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:26:55,427 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:26:58,551 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:01,922 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:27:02,001 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:27:02,001 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:27:04,289 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:09,604 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:27:10,146 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:14,323 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:27:15,332 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:16,935 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:27:17,011 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:27:17,011 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:27:20,337 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:22,852 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:27:22,853 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:27:22,853 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:27:22,854 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:27:23,765 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:27:25,781 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:27:25,874 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:30,911 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:31,937 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:27:32,015 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:27:32,015 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:27:36,271 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:38,915 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:27:42,242 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:44,333 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:27:46,951 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:27:47,027 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:27:47,028 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:27:47,293 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:51,079 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:27:53,216 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:27:58,270 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:01,961 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:28:02,036 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:28:02,037 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:28:03,348 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:05,127 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:28:05,128 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:28:05,129 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:28:05,129 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:28:05,218 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:28:07,244 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:28:09,153 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:14,194 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:14,333 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:28:16,971 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:28:17,033 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:28:17,034 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:28:17,336 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:28:19,355 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:24,401 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:29,486 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:28:30,216 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:31,973 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:28:32,035 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:28:32,035 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:28:35,354 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:40,395 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:43,884 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:28:43,885 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:28:43,885 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:28:43,886 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:28:44,333 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:28:44,624 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:28:45,633 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:28:46,351 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:46,977 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:28:47,037 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:28:47,037 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:28:52,289 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:28:55,744 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:28:57,764 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:01,980 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:29:02,040 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:29:02,041 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:29:03,262 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:09,244 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:09,915 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:29:14,288 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:14,350 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:29:17,003 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:29:17,063 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:29:17,063 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:29:19,315 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:23,681 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:29:23,681 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:29:23,682 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:29:23,682 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:29:24,075 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:29:24,684 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:26,103 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:29:29,708 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:31,991 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:29:32,067 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:29:32,068 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:29:35,401 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:40,255 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:29:40,424 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:44,355 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:29:46,365 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:47,004 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:29:47,065 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:29:47,065 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:29:51,866 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:29:54,435 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:29:56,908 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:01,943 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:02,018 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:30:02,064 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:30:02,064 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:30:07,357 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:12,400 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:12,477 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:30:12,478 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:30:12,478 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:30:12,479 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:30:12,674 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:30:13,688 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:30:14,370 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:30:17,025 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:30:17,086 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:30:17,086 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:30:18,347 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:23,375 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:23,790 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:30:28,500 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:31,875 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:30:32,021 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:30:32,083 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:30:32,083 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:30:34,399 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:36,664 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:30:36,666 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:30:36,666 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:30:36,666 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:30:36,928 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:30:37,943 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:30:39,690 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:43,974 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:30:44,371 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:30:45,375 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:47,036 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:30:47,097 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:30:47,098 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:30:50,414 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:55,662 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:30:56,078 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:31:00,722 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:02,048 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:31:02,119 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:31:02,127 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:31:06,364 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:07,785 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:31:07,786 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:31:07,787 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:31:07,787 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:31:08,196 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:31:08,196 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:31:11,808 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:14,379 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:31:17,035 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:17,051 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:31:17,129 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:31:17,130 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:31:20,339 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:31:22,719 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:27,745 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:30,461 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:31:32,053 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:31:32,132 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:31:32,132 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:31:33,378 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:38,405 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:43,439 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:44,393 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:31:46,232 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:31:46,232 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:31:46,233 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:31:46,234 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:31:46,640 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:31:47,055 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:31:47,132 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:31:47,132 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:31:48,661 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:31:49,382 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:54,423 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:31:59,465 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:02,056 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:32:02,134 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:32:02,134 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:32:02,837 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:32:05,393 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:10,419 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:12,954 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:32:14,396 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:32:16,426 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:17,068 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:32:17,146 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:32:17,146 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:32:21,453 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:26,330 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:32:26,331 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:32:26,331 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:32:26,332 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:32:27,127 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:32:27,340 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:29,149 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:32:32,083 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:32:32,158 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:32:32,158 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:32:32,445 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:37,496 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:40,279 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:32:42,559 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:44,403 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:32:47,092 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:32:47,169 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:32:47,169 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:32:48,467 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:52,387 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:32:54,072 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:32:59,113 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:02,102 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:33:02,177 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:33:02,178 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:33:04,400 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:06,340 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:33:06,342 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:33:06,342 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:33:06,342 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:33:06,568 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:33:08,594 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:33:10,361 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:14,415 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:33:15,424 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:17,088 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:33:17,178 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:33:17,179 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:33:20,457 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:22,774 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:33:26,209 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:31,258 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:32,084 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:33:32,176 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:33:32,176 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:33:34,899 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:33:36,739 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:41,783 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:44,419 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:33:47,087 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:33:47,088 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:47,181 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:33:47,181 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:33:48,099 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:33:48,100 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:33:48,100 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:33:48,101 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:33:49,058 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:33:49,058 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:33:52,124 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:33:57,166 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:01,186 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:34:02,103 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:34:02,193 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:34:02,193 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:34:02,431 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:07,478 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:12,526 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:14,430 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:34:15,343 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:34:17,118 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:34:17,194 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:34:17,194 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:34:18,441 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:23,491 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:28,289 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:34:28,290 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:34:28,290 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:34:28,291 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:34:28,485 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:34:29,304 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:31,522 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:34:32,125 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:34:32,187 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:34:32,187 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:34:34,420 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:39,447 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:43,672 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:34:44,443 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:34:45,444 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:47,137 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:34:47,198 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:34:47,198 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:34:50,524 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:34:54,781 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:34:56,513 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:01,554 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:02,152 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:35:02,212 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:35:02,212 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:35:07,520 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:09,446 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:35:09,446 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:35:09,447 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:35:09,447 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:35:09,955 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:35:10,980 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:35:13,481 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:14,454 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:35:17,162 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:35:17,223 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:35:17,223 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:35:18,518 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:23,546 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:25,148 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:35:28,605 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:32,176 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:35:32,236 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:35:32,236 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:35:34,471 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:37,291 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:35:39,887 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:44,465 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:35:45,468 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:47,185 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:35:47,246 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:35:47,246 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:35:50,552 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:35:51,068 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:35:51,069 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:35:51,069 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:35:51,070 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:35:51,422 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:35:53,448 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:35:56,108 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:01,150 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:02,189 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:36:02,250 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:36:02,250 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:36:05,566 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:36:06,580 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:11,617 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:14,475 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:36:16,720 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:17,192 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:36:17,252 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:36:17,252 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:36:17,703 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:36:22,541 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:27,570 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:29,923 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:36:29,924 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:36:29,924 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:36:29,925 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:36:30,846 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:36:31,862 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:36:32,197 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:36:32,257 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:36:32,257 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:36:33,551 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:38,582 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:41,984 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:36:43,972 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:44,481 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:36:47,201 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:36:47,262 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:36:47,262 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:36:49,503 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:54,115 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:36:54,585 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:36:59,632 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:02,214 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:37:02,261 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:37:02,261 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:37:05,538 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:09,515 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:37:09,516 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:37:09,516 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:37:09,517 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:37:10,290 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:37:11,302 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:37:11,533 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:14,486 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:37:17,202 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:17,217 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:37:17,278 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:37:17,278 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:37:23,192 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:23,423 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:37:28,248 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:32,218 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:37:32,294 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:37:32,295 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:37:33,540 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:35,561 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:37:39,006 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:44,023 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:44,497 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:37:47,057 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:37:47,058 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:37:47,058 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:37:47,059 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:37:47,229 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:37:47,308 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:37:47,308 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:37:47,719 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:37:47,719 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:37:49,515 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:54,542 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:37:59,582 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:01,880 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:38:02,230 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:38:02,323 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:38:02,323 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:38:05,531 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:10,567 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:14,506 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:38:16,020 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:38:16,519 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:17,239 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:38:17,333 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:38:17,333 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:38:21,609 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:26,641 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:29,382 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:38:29,383 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:38:29,383 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:38:29,384 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:38:30,184 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:38:32,203 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:38:32,233 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:32,247 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:38:32,337 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:38:32,337 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:38:37,567 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:42,603 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:44,358 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:38:44,510 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:38:47,260 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:38:47,350 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:38:47,350 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:38:47,611 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:52,685 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:58,295 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:38:58,539 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:39:02,271 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:39:02,348 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:39:02,348 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:39:03,609 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:08,629 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:13,120 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:39:13,121 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:39:13,121 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:39:13,123 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:39:13,722 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:39:14,146 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:14,516 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:39:14,731 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:39:17,286 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:39:17,364 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:39:17,364 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:39:19,680 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:24,720 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:29,897 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:39:30,142 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:32,295 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:39:32,357 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:39:32,357 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:39:35,579 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:40,631 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:44,047 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:39:44,520 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:39:46,538 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:47,296 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:39:47,375 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:39:47,376 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:39:51,629 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:56,666 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:39:58,573 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-10 08:39:58,574 DEBUG   SenderThread:5296 [sender.py:send():379] send: history
+2024-04-10 08:39:58,574 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: summary_record
+2024-04-10 08:39:58,574 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:39:59,232 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:40:00,243 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:40:02,295 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:40:02,310 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:40:02,372 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-10 08:40:02,372 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: stop_status
+2024-04-10 08:40:07,670 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:40:12,710 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:40:14,391 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:40:14,420 DEBUG   SenderThread:5296 [sender.py:send():379] send: exit
+2024-04-10 08:40:14,420 INFO    SenderThread:5296 [sender.py:send_exit():586] handling exit code: 255
+2024-04-10 08:40:14,420 INFO    SenderThread:5296 [sender.py:send_exit():588] handling runtime: 2160
+2024-04-10 08:40:14,420 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:40:14,421 INFO    SenderThread:5296 [sender.py:send_exit():594] send defer
+2024-04-10 08:40:14,421 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:14,421 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 0
+2024-04-10 08:40:14,421 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:14,421 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-04-10 08:40:14,421 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 1
+2024-04-10 08:40:14,421 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:14,421 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 1
+2024-04-10 08:40:14,424 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:14,424 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-04-10 08:40:14,424 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 2
+2024-04-10 08:40:14,424 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:14,424 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 2
+2024-04-10 08:40:14,424 INFO    HandlerThread:5296 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-10 08:40:14,424 DEBUG   SystemMonitor:5296 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-10 08:40:14,424 DEBUG   SystemMonitor:5296 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-10 08:40:14,425 INFO    HandlerThread:5296 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-10 08:40:14,425 INFO    HandlerThread:5296 [interfaces.py:finish():202] Joined disk monitor
+2024-04-10 08:40:14,481 INFO    HandlerThread:5296 [interfaces.py:finish():202] Joined gpu monitor
+2024-04-10 08:40:14,481 INFO    HandlerThread:5296 [interfaces.py:finish():202] Joined memory monitor
+2024-04-10 08:40:14,482 INFO    HandlerThread:5296 [interfaces.py:finish():202] Joined network monitor
+2024-04-10 08:40:14,482 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:14,482 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-04-10 08:40:14,482 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 3
+2024-04-10 08:40:14,483 DEBUG   SenderThread:5296 [sender.py:send():379] send: stats
+2024-04-10 08:40:14,483 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:14,483 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 3
+2024-04-10 08:40:14,483 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:14,483 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-04-10 08:40:14,483 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 4
+2024-04-10 08:40:14,484 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:14,484 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 4
+2024-04-10 08:40:14,484 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:14,484 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-04-10 08:40:14,484 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 5
+2024-04-10 08:40:14,484 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:14,484 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 5
+2024-04-10 08:40:14,484 DEBUG   SenderThread:5296 [sender.py:send():379] send: summary
+2024-04-10 08:40:14,485 INFO    SenderThread:5296 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-10 08:40:14,485 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:14,485 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-04-10 08:40:14,485 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 6
+2024-04-10 08:40:14,485 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:14,485 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 6
+2024-04-10 08:40:14,486 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:14,486 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-04-10 08:40:14,486 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 7
+2024-04-10 08:40:14,486 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: status_report
+2024-04-10 08:40:14,486 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:14,486 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 7
+2024-04-10 08:40:14,486 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:14,486 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-04-10 08:40:15,393 INFO    Thread-16 :5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:40:15,423 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-10 08:40:16,484 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 8
+2024-04-10 08:40:16,484 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: poll_exit
+2024-04-10 08:40:16,484 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:16,485 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 8
+2024-04-10 08:40:16,485 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:16,485 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-04-10 08:40:16,485 INFO    SenderThread:5296 [job_builder.py:build():318] Attempting to build job artifact
+2024-04-10 08:40:16,486 INFO    SenderThread:5296 [job_builder.py:_get_source_type():466] no source found
+2024-04-10 08:40:16,486 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 9
+2024-04-10 08:40:16,486 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:16,486 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 9
+2024-04-10 08:40:16,486 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:16,486 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-04-10 08:40:16,486 INFO    SenderThread:5296 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-10 08:40:17,416 INFO    SenderThread:5296 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:40:17,416 INFO    SenderThread:5296 [dir_watcher.py:finish():388] scan: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files
+2024-04-10 08:40:17,416 INFO    SenderThread:5296 [dir_watcher.py:finish():402] scan save: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\conda-environment.yaml conda-environment.yaml
+2024-04-10 08:40:17,417 INFO    SenderThread:5296 [dir_watcher.py:finish():402] scan save: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\config.yaml config.yaml
+2024-04-10 08:40:17,417 INFO    SenderThread:5296 [dir_watcher.py:finish():402] scan save: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log output.log
+2024-04-10 08:40:17,420 INFO    SenderThread:5296 [dir_watcher.py:finish():402] scan save: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\requirements.txt requirements.txt
+2024-04-10 08:40:17,421 INFO    SenderThread:5296 [dir_watcher.py:finish():402] scan save: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-metadata.json wandb-metadata.json
+2024-04-10 08:40:17,421 INFO    SenderThread:5296 [dir_watcher.py:finish():402] scan save: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json wandb-summary.json
+2024-04-10 08:40:17,421 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 10
+2024-04-10 08:40:17,422 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:17,422 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 10
+2024-04-10 08:40:17,424 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:17,424 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-04-10 08:40:17,425 INFO    SenderThread:5296 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-10 08:40:17,444 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-10 08:40:17,445 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: poll_exit
+2024-04-10 08:40:18,383 INFO    wandb-upload_0:5296 [upload_job.py:push():131] Uploaded file C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\conda-environment.yaml
+2024-04-10 08:40:18,462 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-10 08:40:18,462 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: poll_exit
+2024-04-10 08:40:18,929 INFO    wandb-upload_4:5296 [upload_job.py:push():131] Uploaded file C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\wandb-summary.json
+2024-04-10 08:40:18,974 INFO    wandb-upload_1:5296 [upload_job.py:push():131] Uploaded file C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\config.yaml
+2024-04-10 08:40:19,001 INFO    wandb-upload_3:5296 [upload_job.py:push():131] Uploaded file C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\requirements.txt
+2024-04-10 08:40:19,050 INFO    wandb-upload_2:5296 [upload_job.py:push():131] Uploaded file C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\files\output.log
+2024-04-10 08:40:19,264 INFO    Thread-15 (_thread_body):5296 [sender.py:transition_state():614] send defer: 11
+2024-04-10 08:40:19,264 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:19,264 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 11
+2024-04-10 08:40:19,266 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:19,266 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-04-10 08:40:19,266 INFO    SenderThread:5296 [file_pusher.py:join():178] waiting for file pusher
+2024-04-10 08:40:19,266 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 12
+2024-04-10 08:40:19,266 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:19,266 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 12
+2024-04-10 08:40:19,266 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:19,266 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-04-10 08:40:19,266 INFO    SenderThread:5296 [file_stream.py:finish():614] file stream finish called
+2024-04-10 08:40:19,478 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-10 08:40:19,495 INFO    SenderThread:5296 [file_stream.py:finish():618] file stream finish is done
+2024-04-10 08:40:19,495 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 13
+2024-04-10 08:40:19,496 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: poll_exit
+2024-04-10 08:40:19,496 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:19,496 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 13
+2024-04-10 08:40:19,496 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:19,496 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-04-10 08:40:19,496 INFO    SenderThread:5296 [sender.py:transition_state():614] send defer: 14
+2024-04-10 08:40:19,496 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: defer
+2024-04-10 08:40:19,496 DEBUG   SenderThread:5296 [sender.py:send():379] send: final
+2024-04-10 08:40:19,496 DEBUG   SenderThread:5296 [sender.py:send():379] send: footer
+2024-04-10 08:40:19,496 INFO    HandlerThread:5296 [handler.py:handle_request_defer():172] handle defer: 14
+2024-04-10 08:40:19,496 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: defer
+2024-04-10 08:40:19,496 INFO    SenderThread:5296 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-04-10 08:40:19,497 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-10 08:40:19,497 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-10 08:40:19,497 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: server_info
+2024-04-10 08:40:19,497 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: poll_exit
+2024-04-10 08:40:19,497 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: get_summary
+2024-04-10 08:40:19,497 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: poll_exit
+2024-04-10 08:40:19,498 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: sampled_history
+2024-04-10 08:40:19,498 DEBUG   SenderThread:5296 [sender.py:send_request():406] send_request: server_info
+2024-04-10 08:40:19,498 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-10 08:40:19,718 INFO    MainThread:5296 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-04-10 08:40:19,719 INFO    MainThread:5296 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-04-10 08:40:19,721 INFO    MainThread:5296 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-04-10 08:40:19,722 DEBUG   HandlerThread:5296 [handler.py:handle_request():146] handle_request: shutdown
+2024-04-10 08:40:19,722 INFO    HandlerThread:5296 [handler.py:finish():866] shutting down handler
+2024-04-10 08:40:20,512 INFO    WriterThread:5296 [datastore.py:close():296] close: C:\Users\Matrix\Documents\Code\FedMut\FedMut\wandb\run-20240410_080409-7lev7fvd\run-7lev7fvd.wandb
+2024-04-10 08:40:20,724 INFO    SenderThread:5296 [sender.py:finish():1546] shutting down sender
+2024-04-10 08:40:20,724 INFO    SenderThread:5296 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-10 08:40:20,724 INFO    SenderThread:5296 [file_pusher.py:join():178] waiting for file pusher

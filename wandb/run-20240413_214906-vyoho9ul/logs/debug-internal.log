@@ -1,0 +1,43 @@
+2024-04-13 21:49:06,950 INFO    StreamThr :65944 [internal.py:wandb_internal():86] W&B internal server running at pid: 65944, started at: 2024-04-13 21:49:06.949818
+2024-04-13 21:49:06,954 DEBUG   HandlerThread:65944 [handler.py:handle_request():144] handle_request: status
+2024-04-13 21:49:06,963 INFO    WriterThread:65944 [datastore.py:open_for_write():85] open: /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_214906-vyoho9ul/run-vyoho9ul.wandb
+2024-04-13 21:49:06,965 DEBUG   SenderThread:65944 [sender.py:send():379] send: header
+2024-04-13 21:49:06,965 DEBUG   SenderThread:65944 [sender.py:send():379] send: run
+2024-04-13 21:49:07,631 ERROR   SenderThread:65944 [internal_api.py:execute():326] 400 response executing GraphQL.
+2024-04-13 21:49:07,631 ERROR   SenderThread:65944 [internal_api.py:execute():327] {"errors":[{"message":"you may not log runs directly to your organization, please try using your team entity","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2024-04-13 21:49:07,632 ERROR   SenderThread:65944 [sender.py:send_run():976] you may not log runs directly to your organization, please try using your team entity (Error 400: Bad Request)
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 1958, in upsert_run
+    response = self.gql(
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 295, in gql
+    ret = self._retry_gql(
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/lib/gql_request.py", line 56, in execute
+    request.raise_for_status()
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 974, in send_run
+    self._init_run(run, config_value_dict)
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 1012, in _init_run
+    server_run, inserted, server_messages = self._api.upsert_run(
+  File "/home/ubuntu/anaconda3/envs/lrx/lib/python3.9/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: you may not log runs directly to your organization, please try using your team entity (Error 400: Bad Request)
+2024-04-13 21:49:09,248 DEBUG   HandlerThread:65944 [handler.py:handle_request():144] handle_request: shutdown
+2024-04-13 21:49:09,248 INFO    HandlerThread:65944 [handler.py:finish():857] shutting down handler
+2024-04-13 21:49:09,636 INFO    SenderThread:65944 [sender.py:finish():1552] shutting down sender
+2024-04-13 21:49:09,965 INFO    WriterThread:65944 [datastore.py:close():294] close: /home/ubuntu/wjh/FedMut/FedMut/wandb/run-20240413_214906-vyoho9ul/run-vyoho9ul.wandb
