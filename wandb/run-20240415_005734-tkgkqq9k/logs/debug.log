@@ -1,0 +1,34 @@
+2024-04-15 00:57:34,987 INFO    MainThread:75332 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-04-15 00:57:34,987 INFO    MainThread:75332 [wandb_setup.py:_flush():76] Configure stats pid to 75332
+2024-04-15 00:57:34,987 INFO    MainThread:75332 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Matrix\.config\wandb\settings
+2024-04-15 00:57:34,987 INFO    MainThread:75332 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Matrix\Documents\Code\FedPrun1.0\wandb\settings
+2024-04-15 00:57:34,987 INFO    MainThread:75332 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-15 00:57:34,987 INFO    MainThread:75332 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-04-15 00:57:34,987 INFO    MainThread:75332 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main_fed.py', 'program_abspath': 'C:\\Users\\Matrix\\Documents\\Code\\FedPrun1.0\\main_fed.py', 'program': 'C:\\Users\\Matrix\\Documents\\Code\\FedPrun1.0\\main_fed.py'}
+2024-04-15 00:57:34,987 INFO    MainThread:75332 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-04-15 00:57:34,988 INFO    MainThread:75332 [wandb_init.py:_log_setup():521] Logging user logs to C:\Users\Matrix\Documents\Code\FedPrun1.0\wandb\run-20240415_005734-tkgkqq9k\logs\debug.log
+2024-04-15 00:57:34,988 INFO    MainThread:75332 [wandb_init.py:_log_setup():522] Logging internal logs to C:\Users\Matrix\Documents\Code\FedPrun1.0\wandb\run-20240415_005734-tkgkqq9k\logs\debug-internal.log
+2024-04-15 00:57:34,988 INFO    MainThread:75332 [wandb_init.py:init():561] calling init triggers
+2024-04-15 00:57:34,988 INFO    MainThread:75332 [wandb_init.py:init():568] wandb.init called with sweep_config: {}
+config: {'epochs': 850, 'num_users': 100, 'frac': 0.1, 'local_ep': 5, 'local_bs': 50, 'bs': 128, 'optimizer': 'sgd', 'lr': 0.05, 'momentum': 0.5, 'split': 'user', 'algorithm': 'FedAvg', 'limit_time': 300000, 'model': 'vgg', 'kernel_num': 9, 'kernel_sizes': '3,4,5', 'norm': 'batch_norm', 'num_filters': 32, 'max_pool': 'True', 'use_project_head': 0, 'out_dim': 256, 'dataset': 'cifar10', 'generate_data': 0, 'iid': 0, 'noniid_case': 5, 'data_beta': 0.5, 'num_classes': 10, 'num_channels': 3, 'gpu': 0, 'stopping_rounds': 10, 'verbose': False, 'seed': 1, 'prox_alpha': 0.01, 'ensemble_alpha': 0.2, 'temperature': 0.5, 'model_buffer_size': 1, 'pool_option': 'FIFO', 'sim_type': 'L1', 'p': 2.0, 'trans_beta': 500, 'radius': 4.0, 'min_radius': 0.1, 'mut_acc_rate': 0.3, 'mut_bound': 50, 'sparse': True, 'fix': True, 'sparse_init': 'ERK', 'growth': 'random', 'death': 'magnitude', 'redistribution': 'none', 'death_rate': 0.5, 'density': 1, 'density_local': 1.0, 'update_frequency': 100, 'decay_schedule': 'cosine', 'multiplier': 1, 'exname': 'º‰∏ÙFix0.6 À•ºı0.002', 'finetuning': False, 'helf_sparse': True, 'density_dr': 0.002, 'density_fix': 0.6, 'device': device(type='cuda')}
+2024-04-15 00:57:34,988 INFO    MainThread:75332 [wandb_init.py:init():611] starting backend
+2024-04-15 00:57:34,988 INFO    MainThread:75332 [wandb_init.py:init():615] setting up manager
+2024-04-15 00:57:34,989 INFO    MainThread:75332 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-04-15 00:57:34,990 INFO    MainThread:75332 [wandb_init.py:init():623] backend started and connected
+2024-04-15 00:57:34,993 INFO    MainThread:75332 [wandb_init.py:init():715] updated telemetry
+2024-04-15 00:57:35,030 INFO    MainThread:75332 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-04-15 00:57:36,011 INFO    MainThread:75332 [wandb_run.py:_on_init():2357] communicating current version
+2024-04-15 00:57:41,017 INFO    MainThread:75332 [wandb_run.py:_on_init():2366] got version response 
+2024-04-15 00:57:41,017 INFO    MainThread:75332 [wandb_init.py:init():799] starting run threads in backend
+2024-04-15 00:57:44,133 INFO    MainThread:75332 [wandb_run.py:_console_start():2335] atexit reg
+2024-04-15 00:57:44,133 INFO    MainThread:75332 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-04-15 00:57:44,133 INFO    MainThread:75332 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-04-15 00:57:44,133 INFO    MainThread:75332 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-04-15 00:57:44,134 INFO    MainThread:75332 [wandb_init.py:init():842] run started, returning control to user process
+2024-04-15 05:32:33,862 INFO    MainThread:75332 [wandb_run.py:_finish():2064] finishing run mastlab-t3s/FedPrun/tkgkqq9k
+2024-04-15 05:32:33,862 INFO    MainThread:75332 [wandb_run.py:_atexit_cleanup():2304] got exitcode: 0
+2024-04-15 05:32:33,862 INFO    MainThread:75332 [wandb_run.py:_restore():2287] restore
+2024-04-15 05:32:33,862 INFO    MainThread:75332 [wandb_run.py:_restore():2293] restore done
+2024-04-15 05:32:43,371 INFO    MainThread:75332 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-04-15 05:32:43,371 INFO    MainThread:75332 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-04-15 05:32:43,376 INFO    MainThread:75332 [wandb_run.py:_footer_sync_info():3895] logging synced files

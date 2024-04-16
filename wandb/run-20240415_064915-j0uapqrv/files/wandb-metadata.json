@@ -1,0 +1,79 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-04-14T22:49:16.685269",
+    "startedAt": "2024-04-14T22:49:15.136338",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--sparse",
+        "--sparse_init",
+        "ERK",
+        "--fix",
+        "--dataset",
+        "cifar10",
+        "--algorithm",
+        "FedAvg",
+        "--noniid_case",
+        "5",
+        "--iid",
+        "0",
+        "--lr",
+        "0.03",
+        "--epoch",
+        "800",
+        "--helf_sparse",
+        "--density_dr",
+        "0.005",
+        "--density_fix",
+        "0.6",
+        "--model",
+        "vgg",
+        "--exname",
+        "\u95f4\u9694Fix0.6 \u8870\u51cf0.005 lr0.03"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\Matrix\\Documents\\Code\\FedPrun1.0\\main_fed.py",
+    "codePathLocal": "main_fed.py",
+    "codePath": "main_fed.py",
+    "git": {
+        "remote": "git@github.com:UniString/FedPrun1.0.git",
+        "commit": "9c5f34ec8c439ba621e8621f8bb12f982f338577"
+    },
+    "email": "913878720@qq.com",
+    "root": "C:/Users/Matrix/Documents/Code/FedPrun1.0",
+    "host": "DESKTOP-TK6S7DO",
+    "username": "Matrix",
+    "executable": "C:\\Users\\Matrix\\.conda\\envs\\flower\\python.exe",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 3500.0,
+        "min": 0.0,
+        "max": 3500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3500.0,
+            "min": 0.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 977.7352447509766,
+            "used": 490.80648040771484
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 31.817611694335938
+    }
+}

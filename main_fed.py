@@ -43,8 +43,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         
         args.density_local=args.density_local-args.density_dr #线性衰减
         print(args.density_local)
-        #if iter > 100 :
-            #args.lr=0.01
+        if iter > 650 :
+            args.lr=0.01
         #    # args.density_local=0.995
         # elif iter> 60:
         #     args.lr=0.03
@@ -75,7 +75,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
 
 
         for idx in idxs_users:
-
+            
             # print('准备剪枝')
             # 保存原始的标准输出
             original_stdout = sys.stdout
@@ -104,10 +104,12 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
                 
                 if densitys_get :
                     densitys = mask.get_densitys()
-                    densitys_get = False
+                    densitys_get = True
                     
             sys.stdout = original_stdout
-            #print(densitys)
+            if iter % 3 == 1:
+                print("聚合前")
+                print(densitys)
             
             local = LocalUpdate_FedAvg(args=args, dataset=dataset_train, idxs=dict_users[idx])
             w = local.train(net=net_local)#返回参数状态字典
@@ -128,6 +130,9 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
             item_acc = test(net_glob, dataset_test, args)  #有修改
             acc.append(item_acc)
             wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local})
+            print("聚合后")
+            densitys = mask.get_densitys()
+            print(densitys)
             
     
     
