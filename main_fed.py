@@ -24,9 +24,19 @@ from Algorithm.Training_FedGen import FedGen
 from Algorithm.Training_FedMut import FedMut
 from Algorithm.core import Masking, CosineDecay
 import sys
-import io
+import io   
 
-
+def get_densitys(model):
+    #densitys={}
+    total_size=0
+    sparse_size=0
+    for name, weight in model.named_parameters():       
+        print(name, 'density:',(weight!=0).sum().item()/weight.numel())
+        #densitys[name]=(weight!=0).sum().item()/weight.numel()
+        total_size += weight.numel()
+        sparse_size += (weight != 0).sum().int().item()
+    print('Total Model parameters:', total_size)
+    print('Total parameters under sparsity level of {0}: {1}'.format(args.density_local, sparse_size / total_size))
 
 
 def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
@@ -38,13 +48,19 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     densitys = {}
     densitys_get = True
     density_local_store=args.density_local
+    initial_lr = args.lr
+
 
     for iter in range(args.epochs):
-        
+        args.density_fix+=args.density_gr#固定率线性增加
         args.density_local=args.density_local-args.density_dr #线性衰减
+        if iter > 400:
+            args.lr = initial_lr * (0.9 ** (iter // 20))
+
+
         print(args.density_local)
-        if iter > 650 :
-            args.lr=0.01
+        # if iter > 550 :
+        #     args.lr=0.02
         #    # args.density_local=0.995
         # elif iter> 60:
         #     args.lr=0.03
@@ -70,7 +86,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         lens = []
         m = max(int(args.frac * args.num_users), 1)
         idxs_users = np.random.choice(range(args.num_users), m, replace=False)
-        
+        #optimizer = torch.optim.SGD(net_glob.parameters(), lr=self.args.lr, momentum=self.args.momentum)
 
 
 
@@ -131,8 +147,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
             acc.append(item_acc)
             wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local})
             print("聚合后")
-            densitys = mask.get_densitys()
-            print(densitys)
+            get_densitys(net_glob)
+            #print(densitys)
             
     
     
@@ -272,6 +288,7 @@ def test_with_loss(net_glob, dataset_test, args):
 
 if __name__ == '__main__':
     # parse args  
+    
      
     
     args = args_parser()

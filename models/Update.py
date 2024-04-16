@@ -42,6 +42,8 @@ class LocalUpdate_FedAvg(object):
             optimizer = torch.optim.Adam(net.parameters(), lr=self.args.lr)
         elif self.args.optimizer == 'adaBelief':
             optimizer = AdaBelief(net.parameters(), lr=self.args.lr)
+        #scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=100, eta_min=0)
+
 
         Predict_loss = 0
         for iter in range(self.args.local_ep):

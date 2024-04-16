@@ -82,5 +82,7 @@ def args_parser():
     parser.add_argument('--helf_sparse',  action='store_true') 
     parser.add_argument('--density_dr', type=float,  default=0,help="稀疏衰减率")
     parser.add_argument('--density_fix', type=float,  default=1,help="间隔固定率")
+    parser.add_argument('--density_gr', type=float,  default=0,help="固定增长率")
+
     args = parser.parse_args()
     return args

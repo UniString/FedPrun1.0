@@ -17,3 +17,18 @@ config: {'epochs': 800, 'num_users': 100, 'frac': 0.1, 'local_ep': 5, 'local_bs'
 2024-04-15 06:49:15,150 INFO    MainThread:90128 [wandb_init.py:init():623] backend started and connected
 2024-04-15 06:49:15,153 INFO    MainThread:90128 [wandb_init.py:init():715] updated telemetry
 2024-04-15 06:49:15,189 INFO    MainThread:90128 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-04-15 06:49:16,161 INFO    MainThread:90128 [wandb_run.py:_on_init():2357] communicating current version
+2024-04-15 06:49:16,620 INFO    MainThread:90128 [wandb_run.py:_on_init():2366] got version response 
+2024-04-15 06:49:16,621 INFO    MainThread:90128 [wandb_init.py:init():799] starting run threads in backend
+2024-04-15 06:49:18,997 INFO    MainThread:90128 [wandb_run.py:_console_start():2335] atexit reg
+2024-04-15 06:49:18,998 INFO    MainThread:90128 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-04-15 06:49:18,998 INFO    MainThread:90128 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-04-15 06:49:18,998 INFO    MainThread:90128 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-04-15 06:49:18,998 INFO    MainThread:90128 [wandb_init.py:init():842] run started, returning control to user process
+2024-04-15 10:06:12,939 INFO    MainThread:90128 [wandb_run.py:_finish():2064] finishing run mastlab-t3s/FedPrun/j0uapqrv
+2024-04-15 10:06:12,939 INFO    MainThread:90128 [wandb_run.py:_atexit_cleanup():2304] got exitcode: 0
+2024-04-15 10:06:12,939 INFO    MainThread:90128 [wandb_run.py:_restore():2287] restore
+2024-04-15 10:06:12,939 INFO    MainThread:90128 [wandb_run.py:_restore():2293] restore done
+2024-04-15 10:06:20,741 INFO    MainThread:90128 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-04-15 10:06:20,741 INFO    MainThread:90128 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-04-15 10:06:20,746 INFO    MainThread:90128 [wandb_run.py:_footer_sync_info():3895] logging synced files

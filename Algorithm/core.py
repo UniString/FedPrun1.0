@@ -22,7 +22,6 @@ def add_sparse_args(parser):
 def select_elements_uniformly(tensor, ratio):
     """
     从给定张量中均匀选中一定比例的元素。
-
     :param tensor: 输入的张量。
     :param ratio: 要选中的元素比例。
     :return: 布尔索引。
@@ -408,6 +407,7 @@ class Masking(object):
                         #mask = torch.arange(self.masks[name].numel()) % 2 == 0# 首先创建一个和 self.masks[name] 元素数量相同的一维mask
                         #mask = mask.view(self.masks[name].shape)# 然后将这个一维mask reshape成和 self.masks[name] 相同的形状
                         self.masks[name][mask] = 1.0   #固定一半参数
+                        
                     tensor.data = tensor.data*self.masks[name]    
                     #tensor = tensor.to('cuda:0')
         print("本地模型剪枝成功")
