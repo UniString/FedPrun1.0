@@ -1,0 +1,28 @@
+2024-04-15 16:37:21,165 INFO    MainThread:310586 [wandb_setup.py:_flush():76] Current SDK version is 0.15.8
+2024-04-15 16:37:21,165 INFO    MainThread:310586 [wandb_setup.py:_flush():76] Configure stats pid to 310586
+2024-04-15 16:37:21,165 INFO    MainThread:310586 [wandb_setup.py:_flush():76] Loading settings from /home/ubuntu/.config/wandb/settings
+2024-04-15 16:37:21,165 INFO    MainThread:310586 [wandb_setup.py:_flush():76] Loading settings from /home/ubuntu/wjh/FedPrun/wandb/settings
+2024-04-15 16:37:21,165 INFO    MainThread:310586 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-15 16:37:21,165 INFO    MainThread:310586 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-04-15 16:37:21,165 INFO    MainThread:310586 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main_fed.py', 'program': '/home/ubuntu/wjh/FedPrun/main_fed.py'}
+2024-04-15 16:37:21,165 INFO    MainThread:310586 [wandb_init.py:_log_setup():507] Logging user logs to /home/ubuntu/wjh/FedPrun/wandb/run-20240415_163721-0mb1xat5/logs/debug.log
+2024-04-15 16:37:21,165 INFO    MainThread:310586 [wandb_init.py:_log_setup():508] Logging internal logs to /home/ubuntu/wjh/FedPrun/wandb/run-20240415_163721-0mb1xat5/logs/debug-internal.log
+2024-04-15 16:37:21,166 INFO    MainThread:310586 [wandb_init.py:init():547] calling init triggers
+2024-04-15 16:37:21,166 INFO    MainThread:310586 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'epochs': 750, 'num_users': 100, 'frac': 0.1, 'local_ep': 5, 'local_bs': 50, 'bs': 128, 'optimizer': 'sgd', 'lr': 0.01, 'momentum': 0.5, 'split': 'user', 'algorithm': 'FedAvg', 'limit_time': 300000, 'model': 'resnet50', 'kernel_num': 9, 'kernel_sizes': '3,4,5', 'norm': 'batch_norm', 'num_filters': 32, 'max_pool': 'True', 'use_project_head': 0, 'out_dim': 256, 'dataset': 'cifar10', 'generate_data': 0, 'iid': 0, 'noniid_case': 5, 'data_beta': 0.5, 'num_classes': 10, 'num_channels': 3, 'gpu': 1, 'stopping_rounds': 10, 'verbose': False, 'seed': 1, 'prox_alpha': 0.01, 'ensemble_alpha': 0.2, 'temperature': 0.5, 'model_buffer_size': 1, 'pool_option': 'FIFO', 'sim_type': 'L1', 'p': 2.0, 'trans_beta': 500, 'radius': 4.0, 'min_radius': 0.1, 'mut_acc_rate': 0.3, 'mut_bound': 50, 'sparse': True, 'fix': True, 'sparse_init': 'ERK', 'growth': 'random', 'death': 'magnitude', 'redistribution': 'none', 'death_rate': 0.5, 'density': 1, 'density_local': 1.0, 'update_frequency': 100, 'decay_schedule': 'cosine', 'multiplier': 1, 'exname': '间隔Fix0.5 衰减0.005', 'finetuning': False, 'helf_sparse': True, 'density_dr': 0.005, 'density_fix': 0.5, 'device': device(type='cuda')}
+2024-04-15 16:37:21,166 INFO    MainThread:310586 [wandb_init.py:init():596] starting backend
+2024-04-15 16:37:21,166 INFO    MainThread:310586 [wandb_init.py:init():600] setting up manager
+2024-04-15 16:37:21,168 INFO    MainThread:310586 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-04-15 16:37:21,170 INFO    MainThread:310586 [wandb_init.py:init():606] backend started and connected
+2024-04-15 16:37:21,179 INFO    MainThread:310586 [wandb_init.py:init():697] updated telemetry
+2024-04-15 16:37:21,179 INFO    MainThread:310586 [wandb_init.py:init():730] communicating run to backend with 60.0 second timeout
+2024-04-15 16:37:21,938 INFO    MainThread:310586 [wandb_run.py:_on_init():2180] communicating current version
+2024-04-15 16:37:22,293 INFO    MainThread:310586 [wandb_run.py:_on_init():2189] got version response upgrade_message: "wandb version 0.16.6 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-04-15 16:37:22,293 INFO    MainThread:310586 [wandb_init.py:init():781] starting run threads in backend
+2024-04-15 16:37:24,486 INFO    MainThread:310586 [wandb_run.py:_console_start():2159] atexit reg
+2024-04-15 16:37:24,487 INFO    MainThread:310586 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2024-04-15 16:37:24,487 INFO    MainThread:310586 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2024-04-15 16:37:24,487 INFO    MainThread:310586 [wandb_run.py:_redirect():2104] Redirects installed.
+2024-04-15 16:37:24,488 INFO    MainThread:310586 [wandb_init.py:init():822] run started, returning control to user process
+2024-04-15 17:18:11,763 WARNING MsgRouterThr:310586 [router.py:message_loop():77] message_loop has been closed

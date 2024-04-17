@@ -27,12 +27,12 @@ import sys
 import io   
 
 def get_densitys(model):
-    #densitys={}
+    densitys={}
     total_size=0
     sparse_size=0
     for name, weight in model.named_parameters():       
         print(name, 'density:',(weight!=0).sum().item()/weight.numel())
-        #densitys[name]=(weight!=0).sum().item()/weight.numel()
+        densitys[name]=(weight!=0).sum().item()/weight.numel()
         total_size += weight.numel()
         sparse_size += (weight != 0).sum().int().item()
     print('Total Model parameters:', total_size)
@@ -49,13 +49,15 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     densitys_get = True
     density_local_store=args.density_local
     initial_lr = args.lr
-
-
+    initial_fix= args.density_fix  #Fix 的上限
+    args.density_fix=0
+    
     for iter in range(args.epochs):
-        args.density_fix+=args.density_gr#固定率线性增加
+        if args.density_fix <= initial_fix   :
+            args.density_fix+=args.density_gr#固定率线性增加
         args.density_local=args.density_local-args.density_dr #线性衰减
-        if iter > 400:
-            args.lr = initial_lr * (0.9 ** (iter // 20))
+        #if iter > 400:
+        args.lr = initial_lr * (0.6 ** (iter // 100))
 
 
         print(args.density_local)
@@ -89,7 +91,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         #optimizer = torch.optim.SGD(net_glob.parameters(), lr=self.args.lr, momentum=self.args.momentum)
 
 
-
+        flag = True
         for idx in idxs_users:
             
             # print('准备剪枝')
@@ -123,9 +125,10 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
                     densitys_get = True
                     
             sys.stdout = original_stdout
-            if iter % 3 == 1:
+            if iter % 3 == 1 and flag:
                 print("聚合前")
                 print(densitys)
+                flag=False
             
             local = LocalUpdate_FedAvg(args=args, dataset=dataset_train, idxs=dict_users[idx])
             w = local.train(net=net_local)#返回参数状态字典
@@ -145,7 +148,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         if iter % 3 == 1:
             item_acc = test(net_glob, dataset_test, args)  #有修改
             acc.append(item_acc)
-            wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local})
+            wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local,"lr":args.lr,"density_fix":args.density_fix})
             print("聚合后")
             get_densitys(net_glob)
             #print(densitys)
