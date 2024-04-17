@@ -1,0 +1,904 @@
+2024-04-16 16:05:19,416 INFO    StreamThr :465401 [internal.py:wandb_internal():86] W&B internal server running at pid: 465401, started at: 2024-04-16 16:05:19.415012
+2024-04-16 16:05:19,419 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status
+2024-04-16 16:05:19,429 INFO    WriterThread:465401 [datastore.py:open_for_write():85] open: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/run-ru9blqwx.wandb
+2024-04-16 16:05:19,430 DEBUG   SenderThread:465401 [sender.py:send():379] send: header
+2024-04-16 16:05:19,430 DEBUG   SenderThread:465401 [sender.py:send():379] send: run
+2024-04-16 16:05:20,223 INFO    SenderThread:465401 [dir_watcher.py:__init__():211] watching files in: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files
+2024-04-16 16:05:20,224 INFO    SenderThread:465401 [sender.py:_start_run_threads():1121] run started: ru9blqwx with start time 1713254719.415543
+2024-04-16 16:05:20,226 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:05:20,227 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:05:20,231 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: check_version
+2024-04-16 16:05:20,232 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: check_version
+2024-04-16 16:05:20,562 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: run_start
+2024-04-16 16:05:20,574 DEBUG   HandlerThread:465401 [system_info.py:__init__():31] System info init
+2024-04-16 16:05:20,574 DEBUG   HandlerThread:465401 [system_info.py:__init__():46] System info init done
+2024-04-16 16:05:20,574 INFO    HandlerThread:465401 [system_monitor.py:start():181] Starting system monitor
+2024-04-16 16:05:20,574 INFO    SystemMonitor:465401 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2024-04-16 16:05:20,575 INFO    HandlerThread:465401 [system_monitor.py:probe():201] Collecting system info
+2024-04-16 16:05:20,576 INFO    SystemMonitor:465401 [interfaces.py:start():190] Started cpu monitoring
+2024-04-16 16:05:20,577 INFO    SystemMonitor:465401 [interfaces.py:start():190] Started disk monitoring
+2024-04-16 16:05:20,579 INFO    SystemMonitor:465401 [interfaces.py:start():190] Started gpu monitoring
+2024-04-16 16:05:20,579 INFO    SystemMonitor:465401 [interfaces.py:start():190] Started memory monitoring
+2024-04-16 16:05:20,581 INFO    SystemMonitor:465401 [interfaces.py:start():190] Started network monitoring
+2024-04-16 16:05:20,762 DEBUG   HandlerThread:465401 [system_info.py:probe():195] Probing system
+2024-04-16 16:05:20,770 DEBUG   HandlerThread:465401 [gitlib.py:_init_repo():53] git repository is invalid
+2024-04-16 16:05:20,770 DEBUG   HandlerThread:465401 [system_info.py:probe():240] Probing system done
+2024-04-16 16:05:20,770 DEBUG   HandlerThread:465401 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-76-generic-x86_64-with-glibc2.35', 'python': '3.9.17', 'heartbeatAt': '2024-04-16T08:05:20.762704', 'startedAt': '2024-04-16T08:05:19.408415', 'docker': None, 'cuda': None, 'args': ('--sparse', '--sparse_init', 'ERK', '--fix', '--dataset', 'cifar10', '--algorithm', 'FedAvg', '--noniid_case', '5', '--iid', '0', '--lr', '0.1', '--epoch', '700', '--helf_sparse', '--density_dr', '0.005', '--density_fix', '0.4', '--model', 'resnet18', '--exname', '间隔Fix0.4 衰减0.005'), 'state': 'running', 'program': '/home/ubuntu/wjh/FedPrun/main_fed.py', 'codePath': 'main_fed.py', 'host': 'ubuntu', 'username': 'ubuntu', 'executable': '/home/ubuntu/anaconda3/envs/lrx/bin/python', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 2159.9858828124998, 'min': 800.0, 'max': 3500.0}, 'cpu_freq_per_core': [{'current': 2300.001, 'min': 800.0, 'max': 3500.0}, {'current': 2300.001, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3117.315, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3117.583, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2300.0, 'min': 800.0, 'max': 3500.0}, {'current': 3118.414, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 2300.001, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 900.0, 'min': 800.0, 'max': 3500.0}, {'current': 2300.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 1600.036, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2300.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 2300.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 2825.971, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3134.03, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 900.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3135.296, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3135.836, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3135.619, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 1400.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3135.008, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2300.001, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3134.593, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 2999.998, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 2839.98, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.001, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 2999.999, 'min': 800.0, 'max': 3500.0}, {'current': 800.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3000.0, 'min': 800.0, 'max': 3500.0}, {'current': 3500.0, 'min': 800.0, 'max': 3500.0}, {'current': 2999.999, 'min': 800.0, 'max': 3500.0}, {'current': 2999.999, 'min': 800.0, 'max': 3500.0}], 'disk': {'total': 915.3232879638672, 'used': 853.3899955749512}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 3, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 125.4761962890625}}
+2024-04-16 16:05:20,770 INFO    HandlerThread:465401 [system_monitor.py:probe():211] Finished collecting system info
+2024-04-16 16:05:20,771 INFO    HandlerThread:465401 [system_monitor.py:probe():214] Publishing system info
+2024-04-16 16:05:20,771 DEBUG   HandlerThread:465401 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-04-16 16:05:20,771 DEBUG   HandlerThread:465401 [system_info.py:_save_pip():67] Saving pip packages done
+2024-04-16 16:05:20,771 DEBUG   HandlerThread:465401 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-04-16 16:05:21,225 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/conda-environment.yaml
+2024-04-16 16:05:21,225 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:05:21,226 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/requirements.txt
+2024-04-16 16:05:23,381 DEBUG   HandlerThread:465401 [system_info.py:_save_conda():86] Saving conda packages done
+2024-04-16 16:05:23,384 INFO    HandlerThread:465401 [system_monitor.py:probe():216] Finished publishing system info
+2024-04-16 16:05:23,389 DEBUG   SenderThread:465401 [sender.py:send():379] send: files
+2024-04-16 16:05:23,390 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2024-04-16 16:05:23,399 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:05:23,400 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:05:24,154 DEBUG   SenderThread:465401 [sender.py:send():379] send: telemetry
+2024-04-16 16:05:24,225 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/conda-environment.yaml
+2024-04-16 16:05:24,225 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-metadata.json
+2024-04-16 16:05:24,226 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:05:24,673 INFO    wandb-upload_0:465401 [upload_job.py:push():131] Uploaded file /tmp/tmp5gjdk_9kwandb/dz1q8icn-wandb-metadata.json
+2024-04-16 16:05:25,156 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:05:26,226 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:05:30,157 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:05:35,157 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:05:38,229 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:05:38,399 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:05:38,400 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:05:40,230 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:05:40,292 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:05:42,231 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:05:44,235 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:05:45,498 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:05:47,236 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:05:49,197 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:05:49,199 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:05:49,200 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:05:49,203 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:05:49,237 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:05:49,237 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:05:51,239 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:05:51,240 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:05:52,240 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/config.yaml
+2024-04-16 16:05:53,399 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:05:53,400 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:05:56,746 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:01,746 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:06,829 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:07,245 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:08,400 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:06:08,400 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:06:12,719 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:18,495 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:19,250 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:20,581 DEBUG   SystemMonitor:465401 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2024-04-16 16:06:20,583 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:06:21,251 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:23,252 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:23,400 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:06:23,401 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:06:23,746 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:25,253 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:27,253 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:28,923 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:29,052 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:06:29,058 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:06:29,064 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:06:29,075 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:06:29,254 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:06:29,255 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:31,255 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:34,091 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:38,400 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:06:38,401 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:06:39,725 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:45,244 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:45,260 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:50,245 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:50,585 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:06:53,400 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:06:53,401 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:06:55,456 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:06:57,265 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:06:59,266 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:01,116 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:01,266 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:03,267 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:05,268 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:07,101 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:07,269 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:07,641 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:07:07,642 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:07:07,642 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:07:07,645 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:07:08,269 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:07:08,401 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:07:08,401 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:07:09,270 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:12,713 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:17,714 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:20,586 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:07:21,273 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:23,401 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:07:23,402 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:07:23,667 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:28,668 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:33,277 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:33,713 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:35,277 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:37,278 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:38,401 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:07:38,402 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:07:39,279 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:39,529 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:41,280 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:43,280 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:45,281 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:45,399 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:46,097 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:07:46,103 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:07:46,106 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:07:46,125 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:07:46,281 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:07:47,282 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:07:50,587 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:07:50,588 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:53,402 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:07:53,403 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:07:55,700 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:07:59,286 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:01,471 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:06,472 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:08,402 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:08:08,402 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:08:09,289 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:11,290 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:12,327 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:13,291 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:15,291 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:17,292 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:17,386 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:19,293 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:20,589 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:08:20,732 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:08:20,738 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:08:20,742 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:08:20,752 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:08:21,294 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:08:21,294 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:22,775 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:23,402 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:08:23,403 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:08:28,731 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:34,381 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:35,298 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:38,402 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:08:38,403 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:08:39,706 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:44,722 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:45,301 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:47,302 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:49,303 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:50,513 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:50,591 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:08:51,303 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:53,304 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:53,402 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:08:53,403 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:08:55,307 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:08:55,876 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:08:57,117 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:08:57,120 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:08:57,122 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:08:57,137 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:08:57,307 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:08:59,308 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:01,155 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:06,155 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:08,403 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:09:08,404 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:09:11,311 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:11,789 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:16,790 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:20,592 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:09:21,315 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:21,979 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:23,315 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:23,403 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:09:23,403 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:09:25,316 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:27,316 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:27,560 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:29,317 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:31,317 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:31,429 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:09:31,431 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:09:31,433 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:09:31,447 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:09:32,318 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:09:33,318 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:33,494 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:38,403 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:09:38,403 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:09:38,733 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:44,617 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:45,322 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:49,618 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:50,594 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:09:53,403 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:09:53,403 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:09:54,778 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:09:57,324 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:59,325 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:09:59,938 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:01,326 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:03,327 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:04,976 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:05,328 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:07,328 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:08,403 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:10:08,405 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:10:09,329 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:10,324 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:10:10,327 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:10,328 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:10:10,332 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:10:10,349 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:10:10,350 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:10:11,343 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:15,372 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:20,372 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:20,596 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:10:23,403 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:10:23,403 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:10:25,347 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:25,758 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:30,758 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:35,350 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:35,802 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:37,350 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:38,403 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:10:38,404 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:10:39,350 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:41,352 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:41,667 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:43,353 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:45,353 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:47,023 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:47,290 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:10:47,293 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:10:47,293 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:10:47,310 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:10:47,354 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:10:47,354 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:49,355 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:10:50,598 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:10:52,599 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:10:53,404 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:10:53,404 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:10:57,717 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:00,358 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:02,756 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:07,756 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:08,404 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:11:08,405 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:11:13,285 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:14,362 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:16,363 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:18,364 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:18,733 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:20,365 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:20,598 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:11:22,366 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:23,404 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:11:23,405 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:11:23,757 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:23,839 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:11:23,845 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:11:23,852 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:11:23,859 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:11:24,366 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:11:24,367 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:26,367 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:28,869 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:33,870 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:36,371 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:38,405 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:11:38,408 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:11:39,716 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:44,717 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:49,724 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:50,381 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:50,603 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:11:52,382 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:53,405 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:11:53,406 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:11:54,382 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:55,183 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:11:56,383 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:11:58,384 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:00,385 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:01,154 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:02,386 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:02,512 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:12:02,514 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:12:02,515 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:12:02,534 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:12:03,387 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:12:04,387 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:06,554 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:08,405 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:12:08,406 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:12:11,748 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:16,393 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:17,284 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:20,605 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:12:22,607 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:23,406 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:12:23,406 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:12:26,397 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:27,636 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:28,399 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:30,399 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:32,401 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:32,698 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:34,402 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:36,402 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:37,944 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:38,299 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:12:38,300 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:12:38,300 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:12:38,307 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:12:38,403 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:12:38,403 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:38,405 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:12:38,406 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:12:40,404 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:43,755 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:49,704 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:12:50,409 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:12:50,609 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:12:53,405 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:12:53,406 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:12:54,820 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:00,220 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:00,414 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:02,415 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:04,415 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:05,823 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:06,424 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:08,405 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:13:08,406 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:13:08,425 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:10,425 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:11,328 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:12,229 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:13:12,232 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:13:12,233 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:13:12,248 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:13:12,426 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:13:14,427 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:17,273 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:20,612 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:13:22,615 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:23,406 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:13:23,407 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:13:26,431 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:28,040 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:33,041 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:38,042 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:38,406 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:13:38,407 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:13:40,435 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:42,436 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:43,092 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:44,437 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:46,438 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:48,382 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:48,438 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:50,439 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:50,617 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:13:51,918 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:13:51,921 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:13:51,921 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:13:51,933 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:13:52,439 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:13:53,406 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:13:53,406 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:13:53,407 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:13:54,440 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:13:58,746 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:03,820 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:04,445 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:08,407 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:14:08,407 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:14:09,679 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:15,136 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:16,451 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:18,451 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:20,452 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:20,618 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:14:20,622 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:22,453 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:23,407 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:14:23,408 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:14:24,454 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:25,808 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:26,455 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:27,378 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:14:27,381 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:14:27,382 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:14:27,404 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:14:27,455 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:14:28,456 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:31,419 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:36,420 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:38,406 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:14:38,407 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:14:40,462 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:41,876 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:46,877 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:50,623 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:14:52,468 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:52,705 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:53,406 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:14:53,407 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:14:54,469 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:56,470 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:14:58,043 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:14:58,479 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:00,480 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:02,481 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:03,303 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:15:03,304 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:03,306 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:15:03,307 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:15:03,321 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:15:03,481 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:15:04,481 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:08,351 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:08,407 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:15:08,407 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:15:13,791 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:14,486 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:18,792 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:20,625 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:15:23,408 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:15:23,408 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:15:24,279 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:26,491 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:28,491 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:29,988 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:30,492 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:32,493 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:34,493 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:35,642 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:36,494 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:37,130 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:15:37,133 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:15:37,136 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:15:37,145 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:15:37,494 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:15:38,408 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:15:38,408 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:15:38,494 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:40,731 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:45,732 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:50,626 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:15:51,672 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:15:52,499 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:15:53,409 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:15:53,410 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:15:56,715 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:01,716 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:02,502 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:05,508 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:07,457 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:07,509 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:08,409 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:16:08,410 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:16:09,510 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:11,511 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:13,177 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:13,511 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:15,318 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:16:15,322 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:16:15,323 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:16:15,348 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:16:15,512 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:16:17,513 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:18,367 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:20,627 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:16:23,408 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:23,409 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:16:23,409 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:16:27,517 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:28,611 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:33,613 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:38,409 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:16:38,410 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:16:38,678 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:41,522 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:43,523 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:44,340 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:45,525 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:47,526 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:49,382 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:49,527 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:50,629 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:16:51,527 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:53,410 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:16:53,412 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:16:53,960 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:16:53,970 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:16:53,975 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:16:53,980 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:16:54,529 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:16:54,994 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:16:55,529 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:16:59,995 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:04,996 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:07,534 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:08,410 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:17:08,411 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:17:10,757 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:15,757 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:19,538 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:20,631 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:17:21,539 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:21,755 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:23,410 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:17:23,410 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:17:23,540 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:25,540 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:27,135 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:27,541 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:28,926 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:17:28,930 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:17:28,931 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:17:28,936 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:17:29,541 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:17:31,542 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:32,960 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:37,960 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:38,410 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:17:38,410 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:17:43,704 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:45,547 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:48,704 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:50,633 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:17:53,410 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:17:53,410 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:17:53,706 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:55,551 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:57,552 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:17:59,288 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:17:59,552 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:01,553 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:03,554 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:04,819 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:05,555 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:06,083 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:18:06,089 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:18:06,090 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:18:06,108 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:18:06,556 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:18:07,556 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:08,410 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:18:08,410 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:18:10,757 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:15,758 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:19,560 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:20,634 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:18:21,635 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:23,410 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:18:23,411 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:18:26,775 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:31,565 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:31,778 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:33,565 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:35,566 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:36,850 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:37,567 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:38,411 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:18:38,412 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:18:39,568 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:41,569 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:41,956 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:43,570 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:44,295 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:18:44,303 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:18:44,314 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:18:44,320 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:18:44,570 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:18:45,570 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:47,336 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:50,635 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:18:52,637 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:18:53,411 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:18:53,411 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:18:57,575 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:18:58,440 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:03,440 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:07,578 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:08,411 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:19:08,412 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:19:08,706 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:09,578 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:11,579 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:13,580 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:14,179 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:15,580 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:17,581 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:19,331 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:19,582 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:20,408 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:19:20,416 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:19:20,421 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:19:20,442 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:19:20,583 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:19:20,640 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:19:21,584 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:23,411 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:19:23,411 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:19:24,726 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:29,727 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:33,588 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:35,220 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:38,412 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:19:38,413 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:19:40,718 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:43,591 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:45,593 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:46,047 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:47,593 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:49,594 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:50,640 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:19:51,367 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:51,595 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:53,411 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:19:53,411 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:19:53,595 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:55,596 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:19:56,725 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:19:56,726 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:19:56,727 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:19:56,727 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:19:56,730 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:19:57,598 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:19:57,598 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:01,761 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:06,761 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:08,411 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:20:08,412 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:20:11,603 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:12,265 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:17,266 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:20,643 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:20:22,823 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:23,412 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:20:23,412 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:20:23,606 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:25,607 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:27,608 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:28,577 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:29,608 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:31,609 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:33,610 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:34,169 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:35,321 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:20:35,323 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:20:35,323 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:20:35,328 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:20:35,611 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:20:37,611 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:38,412 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:20:38,412 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:20:39,767 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:44,768 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:47,615 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:20:49,861 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:50,644 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:20:53,413 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:20:53,414 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:20:55,724 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:20:59,619 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:01,149 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:01,619 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:03,620 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:05,621 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:06,530 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:07,622 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:08,413 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:21:08,414 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:21:09,626 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:11,637 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:11,873 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:21:11,874 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:11,874 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:21:11,874 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:21:11,877 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:21:12,638 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:21:14,638 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:16,906 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:20,645 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:21:22,647 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:23,413 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:21:23,414 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:21:24,642 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:27,743 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:32,744 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:38,414 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:21:38,415 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:38,415 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:21:38,647 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:40,648 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:42,649 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:43,935 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:44,650 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:46,650 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:47,226 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-16 16:21:47,228 DEBUG   SenderThread:465401 [sender.py:send():379] send: history
+2024-04-16 16:21:47,229 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: summary_record
+2024-04-16 16:21:47,235 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:21:47,651 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:21:48,651 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:21:49,267 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:50,649 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:21:53,414 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-16 16:21:53,415 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: stop_status
+2024-04-16 16:21:54,708 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:59,709 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:21:59,931 DEBUG   SenderThread:465401 [sender.py:send():379] send: exit
+2024-04-16 16:21:59,931 INFO    SenderThread:465401 [sender.py:send_exit():584] handling exit code: 255
+2024-04-16 16:21:59,931 INFO    SenderThread:465401 [sender.py:send_exit():586] handling runtime: 999
+2024-04-16 16:21:59,932 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:21:59,932 INFO    SenderThread:465401 [sender.py:send_exit():592] send defer
+2024-04-16 16:21:59,933 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:21:59,933 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 0
+2024-04-16 16:21:59,933 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:21:59,934 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 0
+2024-04-16 16:21:59,934 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 1
+2024-04-16 16:21:59,934 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:21:59,934 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 1
+2024-04-16 16:21:59,934 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:21:59,935 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 1
+2024-04-16 16:21:59,935 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 2
+2024-04-16 16:21:59,935 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:21:59,935 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 2
+2024-04-16 16:21:59,935 INFO    HandlerThread:465401 [system_monitor.py:finish():190] Stopping system monitor
+2024-04-16 16:21:59,935 DEBUG   SystemMonitor:465401 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2024-04-16 16:21:59,935 DEBUG   SystemMonitor:465401 [system_monitor.py:_start():170] Publishing last batch of metrics
+2024-04-16 16:21:59,937 INFO    HandlerThread:465401 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-16 16:21:59,937 INFO    HandlerThread:465401 [interfaces.py:finish():202] Joined disk monitor
+2024-04-16 16:22:00,657 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:22:00,681 INFO    HandlerThread:465401 [interfaces.py:finish():202] Joined gpu monitor
+2024-04-16 16:22:00,682 INFO    HandlerThread:465401 [interfaces.py:finish():202] Joined memory monitor
+2024-04-16 16:22:00,683 INFO    HandlerThread:465401 [interfaces.py:finish():202] Joined network monitor
+2024-04-16 16:22:00,684 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:00,684 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 2
+2024-04-16 16:22:00,684 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 3
+2024-04-16 16:22:00,684 DEBUG   SenderThread:465401 [sender.py:send():379] send: stats
+2024-04-16 16:22:00,685 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:00,685 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 3
+2024-04-16 16:22:00,686 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:00,686 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 3
+2024-04-16 16:22:00,686 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 4
+2024-04-16 16:22:00,686 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:00,686 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 4
+2024-04-16 16:22:00,686 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:00,686 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 4
+2024-04-16 16:22:00,686 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 5
+2024-04-16 16:22:00,686 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:00,686 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 5
+2024-04-16 16:22:00,687 DEBUG   SenderThread:465401 [sender.py:send():379] send: summary
+2024-04-16 16:22:00,687 INFO    SenderThread:465401 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-04-16 16:22:00,687 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:00,688 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 5
+2024-04-16 16:22:00,688 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 6
+2024-04-16 16:22:00,688 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:00,688 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 6
+2024-04-16 16:22:00,688 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:00,688 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 6
+2024-04-16 16:22:00,688 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 7
+2024-04-16 16:22:00,688 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: status_report
+2024-04-16 16:22:00,688 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:00,688 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 7
+2024-04-16 16:22:00,689 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:00,689 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 7
+2024-04-16 16:22:00,931 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-16 16:22:01,657 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:22:01,906 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 8
+2024-04-16 16:22:01,906 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: poll_exit
+2024-04-16 16:22:01,907 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:01,907 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 8
+2024-04-16 16:22:01,908 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:01,908 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 8
+2024-04-16 16:22:01,908 INFO    SenderThread:465401 [job_builder.py:build():281] Attempting to build job artifact
+2024-04-16 16:22:01,909 INFO    SenderThread:465401 [job_builder.py:_get_source_type():411] no source found
+2024-04-16 16:22:01,909 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 9
+2024-04-16 16:22:01,909 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:01,909 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 9
+2024-04-16 16:22:01,909 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:01,909 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 9
+2024-04-16 16:22:01,909 INFO    SenderThread:465401 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-16 16:22:01,932 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-16 16:22:02,657 INFO    Thread-12 :465401 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:22:02,658 INFO    SenderThread:465401 [dir_watcher.py:finish():388] scan: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files
+2024-04-16 16:22:02,658 INFO    SenderThread:465401 [dir_watcher.py:finish():402] scan save: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json wandb-summary.json
+2024-04-16 16:22:02,659 INFO    SenderThread:465401 [dir_watcher.py:finish():402] scan save: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log output.log
+2024-04-16 16:22:02,662 INFO    SenderThread:465401 [dir_watcher.py:finish():402] scan save: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-metadata.json wandb-metadata.json
+2024-04-16 16:22:02,662 INFO    SenderThread:465401 [dir_watcher.py:finish():402] scan save: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/config.yaml config.yaml
+2024-04-16 16:22:02,667 INFO    SenderThread:465401 [dir_watcher.py:finish():402] scan save: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/requirements.txt requirements.txt
+2024-04-16 16:22:02,671 INFO    SenderThread:465401 [dir_watcher.py:finish():402] scan save: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/conda-environment.yaml conda-environment.yaml
+2024-04-16 16:22:02,672 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 10
+2024-04-16 16:22:02,678 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: poll_exit
+2024-04-16 16:22:02,678 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:02,678 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 10
+2024-04-16 16:22:02,683 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:02,683 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 10
+2024-04-16 16:22:02,683 INFO    SenderThread:465401 [file_pusher.py:finish():159] shutting down file pusher
+2024-04-16 16:22:02,933 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-16 16:22:02,934 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: poll_exit
+2024-04-16 16:22:03,502 INFO    wandb-upload_0:465401 [upload_job.py:push():131] Uploaded file /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/wandb-summary.json
+2024-04-16 16:22:03,935 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-16 16:22:03,935 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: poll_exit
+2024-04-16 16:22:04,935 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-16 16:22:04,936 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: poll_exit
+2024-04-16 16:22:05,472 INFO    wandb-upload_2:465401 [upload_job.py:push():131] Uploaded file /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/config.yaml
+2024-04-16 16:22:05,474 INFO    wandb-upload_3:465401 [upload_job.py:push():131] Uploaded file /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/requirements.txt
+2024-04-16 16:22:05,533 INFO    wandb-upload_4:465401 [upload_job.py:push():131] Uploaded file /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/conda-environment.yaml
+2024-04-16 16:22:05,936 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-16 16:22:05,937 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: poll_exit
+2024-04-16 16:22:06,073 INFO    wandb-upload_1:465401 [upload_job.py:push():131] Uploaded file /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/files/output.log
+2024-04-16 16:22:06,274 INFO    Thread-11 :465401 [sender.py:transition_state():612] send defer: 11
+2024-04-16 16:22:06,274 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:06,275 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 11
+2024-04-16 16:22:06,275 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:06,276 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 11
+2024-04-16 16:22:06,276 INFO    SenderThread:465401 [file_pusher.py:join():164] waiting for file pusher
+2024-04-16 16:22:06,276 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 12
+2024-04-16 16:22:06,276 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:06,276 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 12
+2024-04-16 16:22:06,277 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:06,277 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 12
+2024-04-16 16:22:06,277 INFO    SenderThread:465401 [file_stream.py:finish():593] file stream finish called
+2024-04-16 16:22:06,937 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-16 16:22:07,035 INFO    SenderThread:465401 [file_stream.py:finish():597] file stream finish is done
+2024-04-16 16:22:07,035 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 13
+2024-04-16 16:22:07,036 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: poll_exit
+2024-04-16 16:22:07,036 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:07,036 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 13
+2024-04-16 16:22:07,037 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:07,037 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 13
+2024-04-16 16:22:07,037 INFO    SenderThread:465401 [sender.py:transition_state():612] send defer: 14
+2024-04-16 16:22:07,037 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: defer
+2024-04-16 16:22:07,037 INFO    HandlerThread:465401 [handler.py:handle_request_defer():170] handle defer: 14
+2024-04-16 16:22:07,038 DEBUG   SenderThread:465401 [sender.py:send():379] send: final
+2024-04-16 16:22:07,038 DEBUG   SenderThread:465401 [sender.py:send():379] send: footer
+2024-04-16 16:22:07,038 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: defer
+2024-04-16 16:22:07,038 INFO    SenderThread:465401 [sender.py:send_request_defer():608] handle sender defer: 14
+2024-04-16 16:22:07,038 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-16 16:22:07,039 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: poll_exit
+2024-04-16 16:22:07,040 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-16 16:22:07,040 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: poll_exit
+2024-04-16 16:22:07,041 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: server_info
+2024-04-16 16:22:07,041 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: server_info
+2024-04-16 16:22:07,046 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: get_summary
+2024-04-16 16:22:07,047 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: sampled_history
+2024-04-16 16:22:07,048 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: job_info
+2024-04-16 16:22:07,556 DEBUG   SenderThread:465401 [sender.py:send_request():406] send_request: job_info
+2024-04-16 16:22:07,556 INFO    MainThread:465401 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2024-04-16 16:22:07,557 INFO    MainThread:465401 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2024-04-16 16:22:07,557 INFO    MainThread:465401 [wandb_run.py:_footer_sync_info():3440] logging synced files
+2024-04-16 16:22:07,558 DEBUG   HandlerThread:465401 [handler.py:handle_request():144] handle_request: shutdown
+2024-04-16 16:22:07,558 INFO    HandlerThread:465401 [handler.py:finish():857] shutting down handler
+2024-04-16 16:22:08,049 INFO    WriterThread:465401 [datastore.py:close():294] close: /home/ubuntu/wjh/FedPrun/wandb/run-20240416_160519-ru9blqwx/run-ru9blqwx.wandb
+2024-04-16 16:22:08,556 INFO    SenderThread:465401 [sender.py:finish():1552] shutting down sender
+2024-04-16 16:22:08,557 INFO    SenderThread:465401 [file_pusher.py:finish():159] shutting down file pusher
+2024-04-16 16:22:08,557 INFO    SenderThread:465401 [file_pusher.py:join():164] waiting for file pusher

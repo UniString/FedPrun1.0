@@ -1,0 +1,551 @@
+ResNetCifar10(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (layer1): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (downsample): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (4): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (5): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (downsample): Sequential(
+        (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=2048, out_features=10, bias=True)
+)
+0.995
+********************************************************************************
+Round   0
+0.99
+********************************************************************************
+Round   1
+Testing accuracy: 10.01
+0.985
+********************************************************************************
+Round   2
+0.98
+********************************************************************************
+Round   3
+0.975
+********************************************************************************
+Round   4
+Testing accuracy: 10.59
+0.97
+********************************************************************************
+Round   5
+0.965
+********************************************************************************
+Round   6
+0.96
+********************************************************************************
+Round   7
+Testing accuracy: 16.29
+0.955
+********************************************************************************
+Round   8
+0.95
+********************************************************************************
+Round   9
+0.945
+********************************************************************************
+Round  10
+Testing accuracy: 18.84
+0.94
+********************************************************************************
+Round  11
+0.9349999999999999
+********************************************************************************
+Round  12
+0.9299999999999999
+********************************************************************************
+Round  13
+Testing accuracy: 23.19
+0.9249999999999999
+********************************************************************************
+Round  14
+0.9199999999999999
+********************************************************************************
+Round  15
+0.9149999999999999
+********************************************************************************
+Round  16
+Testing accuracy: 24.26
+0.9099999999999999
+********************************************************************************
+Round  17
+0.9049999999999999
+********************************************************************************
+Round  18
+0.8999999999999999
+********************************************************************************
+Round  19
+Testing accuracy: 24.26
+0.8949999999999999
+********************************************************************************
+Round  20
+0.8899999999999999
+********************************************************************************
+Round  21
+0.8849999999999999
+********************************************************************************
+Round  22
+Testing accuracy: 24.58
+0.8799999999999999
+********************************************************************************
+Round  23
+0.8749999999999999
+********************************************************************************
+Round  24
+0.8699999999999999
+********************************************************************************
+Round  25
+Testing accuracy: 34.06
+0.8649999999999999
+********************************************************************************
+Round  26
+0.8599999999999999
+********************************************************************************
+Round  27
+0.8549999999999999
+********************************************************************************
+Round  28
+Testing accuracy: 23.68
+0.8499999999999999
+********************************************************************************
+Round  29
+0.8449999999999999
+********************************************************************************
+Round  30
+0.8399999999999999
+********************************************************************************
+Round  31
+Testing accuracy: 30.56
+0.8349999999999999
+********************************************************************************
+Round  32
+0.8299999999999998
+********************************************************************************
+Round  33
+0.8249999999999998
+********************************************************************************
+Round  34
+Testing accuracy: 28.70
+0.8199999999999998
+********************************************************************************
+Round  35
+0.8149999999999998
+********************************************************************************
+Round  36
+0.8099999999999998
+********************************************************************************
+Round  37
+Testing accuracy: 30.36
+0.8049999999999998
+********************************************************************************
+Round  38
+0.7999999999999998
+********************************************************************************
+Round  39
+0.7949999999999998
+********************************************************************************
+Round  40
+Testing accuracy: 31.17
+0.7899999999999998
+********************************************************************************
+Round  41
+0.7849999999999998
+********************************************************************************
+Round  42
+0.7799999999999998
+********************************************************************************
+Round  43
+Testing accuracy: 35.30
+0.7749999999999998
+********************************************************************************
+Round  44
+0.7699999999999998
+********************************************************************************
+Round  45
+0.7649999999999998
+********************************************************************************
+Round  46
+Testing accuracy: 33.81
+0.7599999999999998
+********************************************************************************
+Round  47
+0.7549999999999998
+********************************************************************************
+Round  48
+0.7499999999999998
+********************************************************************************
+Round  49
+Testing accuracy: 33.68
+0.7449999999999998
+********************************************************************************
+Round  50
+0.7399999999999998
+********************************************************************************
+Round  51
+0.7349999999999998
+********************************************************************************
+Round  52
+Testing accuracy: 22.14
+0.7299999999999998
+********************************************************************************
+Round  53
+0.7249999999999998
+********************************************************************************
+Round  54
+0.7199999999999998
+********************************************************************************
+Round  55
+Testing accuracy: 31.70
+0.7149999999999997
+********************************************************************************
+Round  56
+0.7099999999999997
+********************************************************************************
+Round  57
+0.7049999999999997
+********************************************************************************
+Round  58
+Testing accuracy: 31.59
+0.6999999999999997
+********************************************************************************
+Round  59
+0.6949999999999997
+********************************************************************************
+Round  60
+0.6899999999999997
+********************************************************************************
+Round  61
+Testing accuracy: 35.15
+0.6849999999999997
+********************************************************************************
+Round  62
+0.6799999999999997
+********************************************************************************
+Round  63
+0.6749999999999997
+********************************************************************************
+Round  64
+Testing accuracy: 43.37
+0.6699999999999997
+********************************************************************************
+Round  65
+0.6649999999999997
+********************************************************************************
+Round  66
+0.6599999999999997
+********************************************************************************
+Round  67
+Testing accuracy: 34.46
+0.6549999999999997
+********************************************************************************
+Round  68
+0.6499999999999997
+********************************************************************************
+Round  69
+0.6449999999999997
+********************************************************************************
+Round  70
+Testing accuracy: 31.83
+0.6399999999999997
+********************************************************************************
+Round  71
+0.6349999999999997
+********************************************************************************
+Round  72
+0.6299999999999997
+********************************************************************************
+Round  73
+Testing accuracy: 39.33
+0.6249999999999997
+********************************************************************************
+Round  74
+0.6199999999999997
+********************************************************************************
+Round  75
+0.6149999999999997
+********************************************************************************
+Round  76
+Testing accuracy: 43.94
+0.6099999999999997
+********************************************************************************
+Round  77
+0.6049999999999996
+********************************************************************************
+Round  78
+0.5999999999999996
+********************************************************************************
+Round  79
+Testing accuracy: 45.81
+0.5949999999999996
+********************************************************************************
+Round  80
+0.5899999999999996
+********************************************************************************
+Round  81
+0.5849999999999996
+********************************************************************************
+Round  82
+Testing accuracy: 46.60
+0.5799999999999996
+********************************************************************************
+Round  83
+0.5749999999999996
+********************************************************************************
+Round  84
+0.5699999999999996
+********************************************************************************
+Round  85
+Testing accuracy: 45.27
+0.5649999999999996
+********************************************************************************
+Round  86
+0.5599999999999996
+********************************************************************************
+Round  87
+0.5549999999999996
+********************************************************************************
+Round  88
+Testing accuracy: 42.52
+0.5499999999999996
+********************************************************************************
+Round  89
+0.5449999999999996
+********************************************************************************
+Round  90
+0.5399999999999996
+********************************************************************************
+Round  91
+Testing accuracy: 43.15
+0.5349999999999996
+********************************************************************************
+Round  92
+0.5299999999999996
+********************************************************************************
+Round  93
+0.5249999999999996
+********************************************************************************
+Round  94
+Testing accuracy: 25.21
+0.5199999999999996
+********************************************************************************
+Round  95
+0.5149999999999996
+********************************************************************************
+Round  96
+0.5099999999999996
+********************************************************************************
+Round  97
+Testing accuracy: 47.09
+0.5049999999999996
+********************************************************************************
+Round  98
+0.49999999999999956
+********************************************************************************
+Round  99
+0.49499999999999955
+********************************************************************************
+Round 100
+Testing accuracy: 43.38
+0.48999999999999955
+********************************************************************************
+Round 101
+0.48499999999999954
+********************************************************************************
+Round 102
+0.47999999999999954
+********************************************************************************
+Round 103
+Testing accuracy: 44.09
+0.47499999999999953
+********************************************************************************
+Round 104
+0.46999999999999953
+********************************************************************************
+Round 105
+0.4649999999999995
+********************************************************************************
+Round 106
+Testing accuracy: 46.30
+0.4599999999999995
+********************************************************************************
+Round 107
+0.4549999999999995
+********************************************************************************
+Round 108
+0.4499999999999995
+********************************************************************************
+Round 109
+Traceback (most recent call last):
+  File "/home/ubuntu/wjh/FedPrun/main_fed.py", line 348, in <module>
+    FedAvg(net_glob, dataset_train, dataset_test, dict_users)
+  File "/home/ubuntu/wjh/FedPrun/main_fed.py", line 129, in FedAvg
+    item_acc = test(net_glob, dataset_test, args)  #有修改
+  File "/home/ubuntu/wjh/FedPrun/main_fed.py", line 254, in test
+    acc_test, loss_test = test_img(net_glob, dataset_test, args)
+  File "/home/ubuntu/wjh/FedPrun/models/test.py", line 24, in test_img
+    test_loss += F.cross_entropy(log_probs, target, reduction='sum').item()
+KeyboardInterrupt
