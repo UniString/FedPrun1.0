@@ -71,7 +71,7 @@ def FedMut(args, net_glob, dataset_train, dataset_test, dict_users):
     w_locals = []
     sim_arr = []
 
-
+    initial_lr = args.lr
 
 
     m = max(int(args.frac * args.num_users), 1)
@@ -86,15 +86,8 @@ def FedMut(args, net_glob, dataset_train, dataset_test, dict_users):
     #w_old_s1 = copy.deepcopy(net_glob.state_dict())
 
     for iter in range(args.epochs):
-        if iter > 30 :
-            
-            args.lr=0.03
-           # args.density_local=0.995
-        elif iter> 60:
-            args.lr=0.03
-          #  args.density_local=0.999
-        elif iter>120:
-            args.lr=0.03
+        args.lr = initial_lr * (0.6 ** (iter // 100))
+
         w_old = copy.deepcopy(net_glob.state_dict())
         print('*' * 80)
         print('Round {:3d}'.format(iter))

@@ -35,8 +35,10 @@ def get_densitys(model):
         densitys[name]=(weight!=0).sum().item()/weight.numel()
         total_size += weight.numel()
         sparse_size += (weight != 0).sum().int().item()
+    Total_density=sparse_size / total_size
     print('Total Model parameters:', total_size)
     print('Total parameters under sparsity level of {0}: {1}'.format(args.density_local, sparse_size / total_size))
+    return Total_density
 
 
 def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
@@ -50,10 +52,10 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     density_local_store=args.density_local
     initial_lr = args.lr
     initial_fix= args.density_fix  #Fix 的上限
-    args.density_fix=0
+    args.density_fix=1
     
     for iter in range(args.epochs):
-        if args.density_fix <= initial_fix   :
+        if args.density_fix < initial_fix   :
             args.density_fix+=args.density_gr#固定率线性增加
         args.density_local=args.density_local-args.density_dr #线性衰减
         #if iter > 400:
@@ -127,7 +129,10 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
             sys.stdout = original_stdout
             if iter % 3 == 1 and flag:
                 print("聚合前")
+                Total_density_B=get_densitys(net_glob)
+                wandb.log({"Total_density_B":Total_density_B})
                 print(densitys)
+                
                 flag=False
             
             local = LocalUpdate_FedAvg(args=args, dataset=dataset_train, idxs=dict_users[idx])
@@ -148,9 +153,10 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         if iter % 3 == 1:
             item_acc = test(net_glob, dataset_test, args)  #有修改
             acc.append(item_acc)
-            wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local,"lr":args.lr,"density_fix":args.density_fix})
+            
             print("聚合后")
-            get_densitys(net_glob)
+            Total_density_A=get_densitys(net_glob)
+            wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local,"lr":args.lr,"density_fix":args.density_fix,"Total_density":Total_density_A})
             #print(densitys)
             
     
