@@ -16,6 +16,8 @@ def args_parser():
     parser.add_argument('--bs', type=int, default=128, help="test batch size")
     parser.add_argument('--optimizer', type=str, default='sgd', help='the optimizer')
     parser.add_argument('--lr', type=float, default=0.01, help="learning rate")
+    #parser.add_argument('--initial_lr', type=float, default=0.01, help="initial rate")
+    parser.add_argument('--lr_decay', type=float, default=0.6, help="learing rate 衰减率")
     parser.add_argument('--momentum', type=float, default=0.5, help="SGD momentum (default: 0.5)")
     parser.add_argument('--split', type=str, default='user', help="train-test split type, user or sample")
     parser.add_argument("--algorithm", type=str, default="FedDC")

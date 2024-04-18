@@ -40,6 +40,9 @@ def get_densitys(model):
     print('Total parameters under sparsity level of {0}: {1}'.format(args.density_local, sparse_size / total_size))
     return Total_density
 
+def Lr_decay(args,lr_decay,initial_lr,iter):       #指数学习率衰减函数
+    args.lr = initial_lr * (lr_decay ** (iter // 100))
+
 
 def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
 
@@ -49,17 +52,19 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     acc = []
     densitys = {}
     densitys_get = True
-    density_local_store=args.density_local
-    initial_lr = args.lr
+    #density_local_store=args.density_local
+    initial_lr=args.lr
     initial_fix= args.density_fix  #Fix 的上限
     args.density_fix=1
     
     for iter in range(args.epochs):
         if args.density_fix < initial_fix   :
             args.density_fix+=args.density_gr#固定率线性增加
-        args.density_local=args.density_local-args.density_dr #线性衰减
+        if args.density_local > 0   :
+            args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
         #if iter > 400:
-        args.lr = initial_lr * (0.6 ** (iter // 100))
+        Lr_decay(args,args.lr_decay,initial_lr,iter)    #
+        #args.lr = initial_lr * (0.6 ** (iter // 100))
 
 
         print(args.density_local)
@@ -303,6 +308,7 @@ if __name__ == '__main__':
     args = args_parser()
     # 设置要使用的GPU索引
     device_index = args.gpu
+    
 
     # 选择指定的GPU
     torch.cuda.set_device(device_index)

@@ -70,8 +70,9 @@ def FedMut(args, net_glob, dataset_train, dataset_test, dict_users):
     acc = []
     w_locals = []
     sim_arr = []
-
+    lr_decay=0.6
     initial_lr = args.lr
+    args.lr = initial_lr * (lr_decay ** (iter // 100))
 
 
     m = max(int(args.frac * args.num_users), 1)
