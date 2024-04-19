@@ -55,13 +55,20 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     #density_local_store=args.density_local
     initial_lr=args.lr
     initial_fix= args.density_fix  #Fix 的上限
-    args.density_fix=1
+    args.density_fix=0
+    sparse_learning_epoch=100
     
     for iter in range(args.epochs):
         if args.density_fix < initial_fix   :
             args.density_fix+=args.density_gr#固定率线性增加
+        
         if args.density_local > 0   :
             args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
+        if sparse_learning_epoch > 0 and args.density_fix >= 0.5:
+            args.density_fix-=args.density_gr
+            args.density_local+=args.density_dr
+            sparse_learning_epoch-=1
+        
         #if iter > 400:
         Lr_decay(args,args.lr_decay,initial_lr,iter)    #
         #args.lr = initial_lr * (0.6 ** (iter // 100))
@@ -99,6 +106,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
 
 
         flag = True
+        flag2= True
         for idx in idxs_users:
             
             # print('准备剪枝')
@@ -132,19 +140,24 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
                     densitys_get = True
                     
             sys.stdout = original_stdout
-            if iter % 3 == 1 and flag:
+            if iter % 5 == 1 and flag:
                 print("聚合前")
-                Total_density_B=get_densitys(net_glob)
+                Total_density_B=get_densitys(net_local)#修复bug 
                 wandb.log({"Total_density_B":Total_density_B})
-                print(densitys)
+                #print(densitys)
                 
                 flag=False
             
             local = LocalUpdate_FedAvg(args=args, dataset=dataset_train, idxs=dict_users[idx])
             w = local.train(net=net_local)#返回参数状态字典
-            
+            if iter % 5 == 1 and flag2:
+                #get_densitys(net_local)
+                density_localtrain=get_densitys(net_local)
+                wandb.log({"density_ALocaltrain":density_localtrain})
+                flag2=False
             w_locals.append(copy.deepcopy(w))   
             lens.append(len(dict_users[idx]))
+            
         
         
         # update global weights   新方法
@@ -160,8 +173,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
             acc.append(item_acc)
             
             print("聚合后")
-            Total_density_A=get_densitys(net_glob)
-            wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local,"lr":args.lr,"density_fix":args.density_fix,"Total_density":Total_density_A})
+            #Total_density_A=get_densitys(net_glob)
+            wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local,"lr":args.lr,"density_fix":args.density_fix,})#"Total_density":Total_density_A
             #print(densitys)
             
     
