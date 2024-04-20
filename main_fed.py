@@ -56,7 +56,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     initial_lr=args.lr
     initial_fix= args.density_fix  #Fix 的上限
     args.density_fix=0
-    sparse_learning_epoch=200
+    sparse_learning_epoch=50
     
     for iter in range(args.epochs):
         if args.density_fix < initial_fix   :
@@ -64,10 +64,10 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         
         if args.density_local > 0   :
             args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
-        # if sparse_learning_epoch > 0 and args.density_fix >= 0.5:
-        #     args.density_fix-=args.density_gr
-        #     args.density_local+=args.density_dr
-        #     sparse_learning_epoch-=1
+        if sparse_learning_epoch > 0 and args.density_fix >= 0.5:
+            args.density_fix-=args.density_gr
+            args.density_local+=args.density_dr
+            sparse_learning_epoch-=1
         
         #if iter > 400:
         Lr_decay(args,args.lr_decay,initial_lr,iter)    #
@@ -354,7 +354,9 @@ if __name__ == '__main__':
     elif 'cifar' in args.dataset and args.model == 'vgg':
         net_glob = VGG16(args)
         if args.finetuning :
-            net_glob.load_state_dict(torch.load('./output/0/cifar10_FedAvg_vgg_test_model_250_lr_0.03_2024_04_07_21_26_18_frac_0.1.txt'))
+            net_glob.load_state_dict(torch.load('./output/5/0.5/cifar10_FedAvg_vgg_test_model_1000_lr_0.03437968813371699_2024_04_20_14_15_48_frac_0.1.txt'))
+           
+            #net_glob.load_state_dict(torch.load('./output/0/cifar10_FedAvg_vgg_test_model_250_lr_0.03_2024_04_07_21_26_18_frac_0.1.txt'))
             #net_glob.load_state_dict(torch.load('./output/0/cifar10_FedMut_vgg_test_model_300_lr_0.03_2024_04_05_23_36_23_frac_0.1.txt'))
         #elif args.finetuning == "MutBase":
     
