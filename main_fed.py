@@ -56,7 +56,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     initial_lr=args.lr
     initial_fix= args.density_fix  #Fix 的上限
     args.density_fix=0
-    sparse_learning_epoch=100
+    sparse_learning_epoch=200
     
     for iter in range(args.epochs):
         if args.density_fix < initial_fix   :
@@ -64,10 +64,10 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         
         if args.density_local > 0   :
             args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
-        if sparse_learning_epoch > 0 and args.density_fix >= 0.5:
-            args.density_fix-=args.density_gr
-            args.density_local+=args.density_dr
-            sparse_learning_epoch-=1
+        # if sparse_learning_epoch > 0 and args.density_fix >= 0.5:
+        #     args.density_fix-=args.density_gr
+        #     args.density_local+=args.density_dr
+        #     sparse_learning_epoch-=1
         
         #if iter > 400:
         Lr_decay(args,args.lr_decay,initial_lr,iter)    #
@@ -142,8 +142,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
             sys.stdout = original_stdout
             if iter % 5 == 1 and flag:
                 print("聚合前")
-                Total_density_B=get_densitys(net_local)#修复bug 
-                wandb.log({"Total_density_B":Total_density_B})
+                #Total_density_B=get_densitys(net_local)#修复bug 
+                #wandb.log({"Total_density_B":Total_density_B})
                 #print(densitys)
                 
                 flag=False
@@ -152,8 +152,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
             w = local.train(net=net_local)#返回参数状态字典
             if iter % 5 == 1 and flag2:
                 #get_densitys(net_local)
-                density_localtrain=get_densitys(net_local)
-                wandb.log({"density_ALocaltrain":density_localtrain})
+                #density_localtrain=get_densitys(net_local)
+                #wandb.log({"density_ALocaltrain":density_localtrain})
                 flag2=False
             w_locals.append(copy.deepcopy(w))   
             lens.append(len(dict_users[idx]))
