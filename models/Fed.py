@@ -40,8 +40,19 @@ def AggregationMut(w, lens, densitys):
 
 
 
-def Aggregation(w, lens):
+def Aggregation(w, lens,w_masks):#w 包含m个设备状态字典的列表
     w_avg = None
+    w_mask_sum={}
+    for i in range(0,len(w)):
+        if i==0:
+            for k in w[i].keys():
+                w_mask_sum[k]=torch.zeros_like(w_masks[0][k])
+        for k in w[i].keys():
+                w_mask_sum[k] += torch.where(w_masks[i][k] != 0, torch.tensor(1),torch.tensor(0))#零一化，叠加到mask上
+    for k in w_mask_sum.keys():
+                w_mask_sum[k] = torch.where( w_mask_sum[k] == 0, torch.tensor(1),w_mask_sum[k])#避免出现全零的情况，否则0/0
+    # for k in w[i].keys():            
+    #     print(w_mask_sum[k])
     if lens == None:
         total_count = len(w)
         lens = []
@@ -54,14 +65,18 @@ def Aggregation(w, lens):
         if i == 0:
             w_avg = copy.deepcopy(w[0])
             for k in w_avg.keys():
-                w_avg[k] = w[i][k] * lens[i]
+                w_avg[k] = w[i][k] 
+                
         else:
             for k in w_avg.keys():
-                w_avg[k] += w[i][k] * lens[i]
+                w_avg[k] += w[i][k] 
 
     for k in w_avg.keys():
-        w_avg[k] = torch.div(w_avg[k], total_count)
-
+        #print(w_avg[k])
+        w_avg[k] = torch.div(w_avg[k], w_mask_sum[k])
+        
+        #print(w_avg[k])
+    #print(total_count)
     return w_avg
 
 

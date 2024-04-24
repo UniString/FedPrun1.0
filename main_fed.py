@@ -31,12 +31,12 @@ def get_densitys(model):
     total_size=0
     sparse_size=0
     for name, weight in model.named_parameters():       
-        print(name, 'density:',(weight!=0).sum().item()/weight.numel())
+        #print(name, 'density:',(weight!=0).sum().item()/weight.numel())
         densitys[name]=(weight!=0).sum().item()/weight.numel()
         total_size += weight.numel()
         sparse_size += (weight != 0).sum().int().item()
     Total_density=sparse_size / total_size
-    print('Total Model parameters:', total_size)
+    #print('Total Model parameters:', total_size)
     print('Total parameters under sparsity level of {0}: {1}'.format(args.density_local, sparse_size / total_size))
     return Total_density
 
@@ -56,49 +56,39 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     initial_lr=args.lr
     initial_fix= args.density_fix  #Fix 的上限
     args.density_fix=0
+    #args.density_local=0
     sparse_learning_epoch=50
+    TurnFlag= False
     
     for iter in range(args.epochs):
-        if args.density_fix < initial_fix   :
-            args.density_fix+=args.density_gr#固定率线性增加
+        # if iter % 50 == 0 :
+        #     TurnFlag=not TurnFlag
+        #     print(TurnFlag)
         
-        if args.density_local > 0   :
-            args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
-        if sparse_learning_epoch > 0 and args.density_fix >= 0.5:
-            args.density_fix-=args.density_gr
-            args.density_local+=args.density_dr
-            sparse_learning_epoch-=1
+        if args.density_fix < initial_fix  :
+            args.density_fix+=args.density_gr#固定率线性增加
+            # else:
+            #     args.density_fix-=args.density_gr#固定率线性衰减
+        
+        if args.density_local > 0.2   :
+             args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
+        # if sparse_learning_epoch > 0 and args.density_fix >= 0.5:
+        #     args.density_fix-=args.density_gr
+        #     args.density_local+=args.density_dr
+        #     sparse_learning_epoch-=1
         
         #if iter > 400:
-        Lr_decay(args,args.lr_decay,initial_lr,iter)    #
-        #args.lr = initial_lr * (0.6 ** (iter // 100))
+        Lr_decay(args,args.lr_decay,initial_lr,iter)   
 
 
         print(args.density_local)
-        # if iter > 550 :
-        #     args.lr=0.02
-        #    # args.density_local=0.995
-        # elif iter> 60:
-        #     args.lr=0.03
-        #   #  args.density_local=0.999
-        # elif iter>200:
-        #     args.density_local=density_local_store
-            #args.density_local=0.9995
-        #elif iter>180:  
-            # if iter % 10==9:
-            #     args.sparse= True
-            #     print('剪一刀')
-            # else:
-            #     args.sparse= False 
-            #     print('不剪')
-          #  if iter > 260:
-             #   args.sparse = False
 
         print('*'*80)
         print('Round {:3d}'.format(iter))
 
 
-        w_locals = []
+        w_locals = []#包含m个设备状态字典的列表
+        w_masks = []#包含m个设备状态字典的列表
         lens = []
         m = max(int(args.frac * args.num_users), 1)
         idxs_users = np.random.choice(range(args.num_users), m, replace=False)
@@ -140,6 +130,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
                     densitys_get = True
                     
             sys.stdout = original_stdout
+            w_masks.append(copy.deepcopy(net_local.state_dict()))
+            get_densitys(net_local)
             if iter % 5 == 1 and flag:
                 print("聚合前")
                 #Total_density_B=get_densitys(net_local)#修复bug 
@@ -149,6 +141,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
                 flag=False
             
             local = LocalUpdate_FedAvg(args=args, dataset=dataset_train, idxs=dict_users[idx])
+
             w = local.train(net=net_local)#返回参数状态字典
             if iter % 5 == 1 and flag2:
                 #get_densitys(net_local)
@@ -161,7 +154,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         
         
         # update global weights   新方法
-        w_glob = AggregationMut(w_locals, lens ,densitys)
+        #w_glob = AggregationMut(w_locals, lens ,densitys)
+        w_glob = Aggregation(w_locals, lens,w_masks)
 
         # copy weight to net_glob
         net_glob.load_state_dict(w_glob)

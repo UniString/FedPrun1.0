@@ -161,8 +161,8 @@ class Masking(object):
                 print(key)
 
             
-            total_sparse_params = total_sparse_params - self.masks['features.0.weight'].numel()
-            self.masks.pop('features.0.weight')
+            total_sparse_params = total_sparse_params - self.masks['conv1.weight'].numel()
+            self.masks.pop('conv1.weight')
 
             if self.density < 0.2:
                 total_sparse_params = total_sparse_params - self.masks['fc.weight'].numel() * 0.2
