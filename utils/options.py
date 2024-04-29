@@ -85,6 +85,6 @@ def args_parser():
     parser.add_argument('--density_dr', type=float,  default=0,help="稀疏衰减率")
     parser.add_argument('--density_fix', type=float,  default=1,help="间隔固定率")
     parser.add_argument('--density_gr', type=float,  default=0,help="固定增长率")
-
+    parser.add_argument('--aggmut',  action='store_true' ,help="是否启用aggmut")   
     args = parser.parse_args()
     return args

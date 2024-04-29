@@ -45,7 +45,7 @@ def Lr_decay(args,lr_decay,initial_lr,iter):       #指数学习率衰减函数
 
 
 def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
-
+    
     net_glob.train()
     #
     # training
@@ -55,22 +55,21 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     #density_local_store=args.density_local
     initial_lr=args.lr
     initial_fix= args.density_fix  #Fix 的上限
-    args.density_fix=0
+    args.density_fix=0.3
     #args.density_local=0
-    sparse_learning_epoch=50
-    TurnFlag= False
+    
     
     for iter in range(args.epochs):
         # if iter % 50 == 0 :
         #     TurnFlag=not TurnFlag
         #     print(TurnFlag)
         
-        if args.density_fix < initial_fix  :
+        if args.density_fix < initial_fix   :
             args.density_fix+=args.density_gr#固定率线性增加
             # else:
             #     args.density_fix-=args.density_gr#固定率线性衰减
         
-        if args.density_local > 0.2   :
+        if args.density_local > 0  :
              args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
         # if sparse_learning_epoch > 0 and args.density_fix >= 0.5:
         #     args.density_fix-=args.density_gr
@@ -120,18 +119,19 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
             
             
             if args.sparse:
+                global rand_indices_dic
                 decay = CosineDecay(args.death_rate, len(train_loader)*(args.epochs*args.multiplier))        #稀疏率，训练总步数 计算衰减率
-                mask = Masking(optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth,
+                mask = Masking(rand_indices_dic,optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth,
                            redistribution_mode=args.redistribution, args=args,train_loader=train_loader)
                 mask.add_module(net_local, sparse_init=args.sparse_init, density=args.density_local)
                 
-                if densitys_get :
-                    densitys = mask.get_densitys()
-                    densitys_get = True
+                # if densitys_get :
+                #     densitys = mask.get_densitys()
+                #     densitys_get = True
                     
             sys.stdout = original_stdout
-            w_masks.append(copy.deepcopy(net_local.state_dict()))
-            get_densitys(net_local)
+            w_masks.append(copy.deepcopy(net_local.state_dict()))#剪完枝尚未训练的模型参数
+            #get_densitys(net_local)
             if iter % 5 == 1 and flag:
                 print("聚合前")
                 #Total_density_B=get_densitys(net_local)#修复bug 
@@ -154,8 +154,10 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         
         
         # update global weights   新方法
-        #w_glob = AggregationMut(w_locals, lens ,densitys)
-        w_glob = Aggregation(w_locals, lens,w_masks)
+        if not args.aggmut:
+            w_glob = Aggregation(w_locals, lens )
+        else:
+            w_glob = AggregationMut(w_locals, lens,w_masks)
 
         # copy weight to net_glob
         net_glob.load_state_dict(w_glob)
@@ -322,7 +324,7 @@ if __name__ == '__main__':
     # args.device = torch.device('cuda:{}'.format(args.gpu) if torch.cuda.is_available() and args.gpu != -1 else 'cpu')
     args.device = torch.device('cuda' if torch.cuda.is_available() and args.gpu != -1 else 'cpu')
     if args.helf_sparse:
-        args.density_local= 2*args.density_local-1.0
+        #args.density_local= 2*args.density_local-1.0
         #args.density_local= 1.5*args.density_local-0.5
         print(args.density_local)
 
@@ -369,11 +371,43 @@ if __name__ == '__main__':
         50,  #batchsize
         num_workers=8,
         pin_memory=True, shuffle=True)
+    
+
+
+
+    def remove_weight_partial_name(masks, partial_name):
+        for name in list(masks.keys()):
+            if partial_name in name:
+                masks.pop(name)
+    masksdic={}
+    rand_indices_dic={}
     if args.sparse:
-                decay = CosineDecay(args.death_rate, len(train_loader)*(args.epochs*args.multiplier))        #稀疏率，训练总步数 计算衰减率
-                mask = Masking(optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth,
-                           redistribution_mode=args.redistribution, args=args,train_loader=train_loader)
-                mask.add_module(net_glob, sparse_init=args.sparse_init, density=args.density)
+                # decay = CosineDecay(args.death_rate, len(train_loader)*(args.epochs*args.multiplier))        #稀疏率，训练总步数 计算衰减率
+                # mask = Masking(optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth,
+                #            redistribution_mode=args.redistribution, args=args,train_loader=train_loader)
+                # mask.add_module(net_glob, sparse_init=args.sparse_init, density=args.density)
+            masks={}
+            for name, tensor in net_glob.named_parameters():
+                if 'bias' not in name:
+                    masksdic[name] = torch.zeros_like(tensor, dtype=torch.float32, requires_grad=False).cuda(args.gpu)
+            
+            for name, module in net_glob.named_modules():
+                if isinstance(module, nn.BatchNorm2d) or isinstance(module, nn.BatchNorm1d):
+                    if name in masksdic:
+                        masksdic.pop(name)
+                        print('pop'+name)
+                    elif name + '.weight' in masksdic:
+                        masksdic.pop(name + '.weight')
+                        print('pop'+name+'.weight')
+            
+            
+
+            for k in masksdic.keys():
+                print(k)
+                num_elements = masksdic[k].numel()
+                rand_indices_dic[k] = torch.randperm(num_elements)
+ 
+
 
     wandb.init(config=args,
                project='FedPrun',

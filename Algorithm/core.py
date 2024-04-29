@@ -5,6 +5,8 @@ import torch.optim as optim
 ##from sparselearning.snip import SNIP, GraSP
 import numpy as np
 import math
+
+
 ####需要在主函数内添加参数    类似sparselearning.core.add_sparse_args(parser)
 def add_sparse_args(parser):
     parser.add_argument('--sparse', action='store_true', help='Enable sparse mode. Default: True.')
@@ -18,6 +20,12 @@ def add_sparse_args(parser):
     parser.add_argument('--update_frequency', type=int, default=100, metavar='N', help='how many iterations to train between parameter exploration')
     parser.add_argument('--decay-schedule', type=str, default='cosine', help='The decay schedule for the pruning rate. Default: cosine. Choose from: cosine, linear.')
 
+def select_elements_by_ratio(tensor, ratio,k,rand_indices_dic):
+    num_elements = tensor.numel()
+    num_to_select = int(num_elements * ratio)  # 按比例计算需要选中的元素数
+    selected_indices = rand_indices_dic[k][:num_to_select]  # 选择前num_to_select个索引
+    multi_dim_indices = np.unravel_index(selected_indices, tensor.shape)
+    return multi_dim_indices
 
 def select_elements_uniformly(tensor, ratio):
     """
@@ -42,8 +50,6 @@ def select_elements_uniformly(tensor, ratio):
     #selected_elements = tensor[multi_dim_indices]
     
     return multi_dim_indices
-
-
 
 
 
@@ -77,7 +83,7 @@ class LinearDecay(object):
 
 
 class Masking(object):
-    def __init__(self, optimizer, death_rate=0.3, growth_death_ratio=1.0, death_rate_decay=None, death_mode='magnitude', growth_mode='momentum', redistribution_mode='momentum', threshold=0.001, args=False, train_loader=False):
+    def __init__(self, rand_indices_dic,optimizer, death_rate=0.3, growth_death_ratio=1.0, death_rate_decay=None, death_mode='magnitude', growth_mode='momentum', redistribution_mode='momentum', threshold=0.001, args=False, train_loader=False):
         print("进入剪枝")    
         growth_modes = ['random', 'momentum', 'momentum_neuron', 'gradient']
         if growth_mode not in growth_modes:
@@ -93,7 +99,7 @@ class Masking(object):
         self.growth_death_ratio = growth_death_ratio
         self.redistribution_mode = redistribution_mode
         self.death_rate_decay = death_rate_decay
-
+        self.rand_indices_dic = rand_indices_dic
         self.densitys= {}
         self.masks = {}
         self.modules = []
@@ -372,8 +378,7 @@ class Masking(object):
         for name in list(self.masks.keys()):
             if partial_name in name:
 
-                print('Removing {0} of size {1} with {2} parameters...'.format(name, self.masks[name].shape,
-                                                                                   np.prod(self.masks[name].shape)))
+                print('Removing {0} of size {1} with {2} parameters...'.format(name, self.masks[name].shape,np.prod(self.masks[name].shape)))
                 removed.add(name)
                 #self.keep_layer.append(self.masks(name))#保留以备后续恢复
                 self.masks.pop(name)
@@ -403,7 +408,7 @@ class Masking(object):
                 if name in self.masks:
                     #tensor = tensor.to('cpu')
                     if self.args.helf_sparse:
-                        mask= select_elements_uniformly(self.masks[name],self.args.density_fix)
+                        mask= select_elements_by_ratio(self.masks[name],self.args.density_fix,name,self.rand_indices_dic)
                         #mask = torch.arange(self.masks[name].numel()) % 2 == 0# 首先创建一个和 self.masks[name] 元素数量相同的一维mask
                         #mask = mask.view(self.masks[name].shape)# 然后将这个一维mask reshape成和 self.masks[name] 相同的形状
                         self.masks[name][mask] = 1.0   #固定一半参数
@@ -412,8 +417,8 @@ class Masking(object):
                     #tensor = tensor.to('cuda:0')
         print("本地模型剪枝成功")
 
-    def get_densitys(self):
-        return self.densitys
+    def get_masks(self):
+        return self.masks
 
     def truncate_weights(self):
 

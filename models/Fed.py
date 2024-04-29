@@ -7,7 +7,7 @@ import torch
 
 
 
-def AggregationMut(w, lens, densitys):
+def Aggregation(w, lens):
     w_avg = None
     if lens == None:
         total_count = len(w)  
@@ -28,11 +28,13 @@ def AggregationMut(w, lens, densitys):
                 w_avg[k] += w[i][k] * lens[i]                           
 
     for k in w_avg.keys():
-        if k not in densitys.keys():  
-            w_avg[k] = torch.div(w_avg[k], total_count)  
-        else:
-            #density_k =len([x for x in w[0][k] if x != 0])/len(w_avg[k])
-            w_avg[k] = torch.div(w_avg[k], total_count)
+        # if k not in densitys.keys():  
+        #     w_avg[k] = torch.div(w_avg[k], total_count)  
+        # else:
+        #     #density_k =len([x for x in w[0][k] if x != 0])/len(w_avg[k])
+        
+        w_avg[k] = torch.div(w_avg[k], total_count)
+        
             
 
     return w_avg
@@ -40,7 +42,7 @@ def AggregationMut(w, lens, densitys):
 
 
 
-def Aggregation(w, lens,w_masks):#w 包含m个设备状态字典的列表
+def AggregationMut(w, lens,w_masks):#w 包含m个设备状态字典的列表
     w_avg = None
     w_mask_sum={}
     for i in range(0,len(w)):
@@ -51,8 +53,9 @@ def Aggregation(w, lens,w_masks):#w 包含m个设备状态字典的列表
                 w_mask_sum[k] += torch.where(w_masks[i][k] != 0, torch.tensor(1),torch.tensor(0))#零一化，叠加到mask上
     for k in w_mask_sum.keys():
                 w_mask_sum[k] = torch.where( w_mask_sum[k] == 0, torch.tensor(1),w_mask_sum[k])#避免出现全零的情况，否则0/0
-    # for k in w[i].keys():            
-    #     print(w_mask_sum[k])
+    # for k in w[i].keys():
+    #    print(k)            
+    #    print(w_mask_sum[k])
     if lens == None:
         total_count = len(w)
         lens = []
@@ -69,7 +72,7 @@ def Aggregation(w, lens,w_masks):#w 包含m个设备状态字典的列表
                 
         else:
             for k in w_avg.keys():
-                w_avg[k] += w[i][k] 
+                w_avg[k] += w[i][k]
 
     for k in w_avg.keys():
         #print(w_avg[k])

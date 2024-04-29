@@ -36,12 +36,19 @@ class LocalUpdate_FedAvg(object):
 
         net.train()
         # train and update
+
+        #冻结参数
+        params_to_update = []
+        for name, param in net.named_parameters():
+            if param.requires_grad and not torch.all(param == 0):
+                params_to_update.append(param)
         if self.args.optimizer == 'sgd':
             optimizer = torch.optim.SGD(net.parameters(), lr=self.args.lr, momentum=self.args.momentum)
-        elif self.args.optimizer == 'adam':
-            optimizer = torch.optim.Adam(net.parameters(), lr=self.args.lr)
-        elif self.args.optimizer == 'adaBelief':
-            optimizer = AdaBelief(net.parameters(), lr=self.args.lr)
+            #optimizer = torch.optim.SGD(params_to_update, lr=self.args.lr, momentum=self.args.momentum)  #对未冻结参数进行更新
+        # elif self.args.optimizer == 'adam':
+        #     optimizer = torch.optim.Adam(net.parameters(), lr=self.args.lr)
+        # elif self.args.optimizer == 'adaBelief':
+        #     optimizer = AdaBelief(net.parameters(), lr=self.args.lr)
         #scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=100, eta_min=0)
 
 
