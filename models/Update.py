@@ -25,12 +25,13 @@ class DatasetSplit(Dataset):
 
 
 class LocalUpdate_FedAvg(object):
-    def __init__(self, args, dataset=None, idxs=None, verbose=False):
+    def __init__(self, masksdic_local,args, dataset=None, idxs=None, verbose=False):
         self.args = args
         self.loss_func = nn.CrossEntropyLoss()
         self.selected_clients = []
         self.ldr_train = DataLoader(DatasetSplit(dataset, idxs), batch_size=self.args.local_bs, shuffle=True)
         self.verbose = verbose
+        self.masksdic_local= masksdic_local
 
     def train(self, net):
 
@@ -38,10 +39,10 @@ class LocalUpdate_FedAvg(object):
         # train and update
 
         #冻结参数
-        params_to_update = []
-        for name, param in net.named_parameters():
-            if param.requires_grad and not torch.all(param == 0):
-                params_to_update.append(param)
+        # params_to_update = []
+        # for name, param in net.named_parameters():
+        #     if param.requires_grad and not torch.all(param == 0):
+        #         params_to_update.append(param)
         if self.args.optimizer == 'sgd':
             optimizer = torch.optim.SGD(net.parameters(), lr=self.args.lr, momentum=self.args.momentum)
             #optimizer = torch.optim.SGD(params_to_update, lr=self.args.lr, momentum=self.args.momentum)  #对未冻结参数进行更新
@@ -61,6 +62,10 @@ class LocalUpdate_FedAvg(object):
                 log_probs = net(images)['output']
                 loss = self.loss_func(log_probs, labels)
                 loss.backward()
+                for name, tensor in net.named_parameters():#冻结参数
+                    if name in self.masksdic_local:
+                        tensor.grad = tensor.grad*self.masksdic_local[name]
+
                 optimizer.step()
 
                 Predict_loss += loss.item()

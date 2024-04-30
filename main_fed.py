@@ -55,22 +55,30 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     #density_local_store=args.density_local
     initial_lr=args.lr
     initial_fix= args.density_fix  #Fix 的上限
-    args.density_fix=0.3
+    args.density_fix=0
     #args.density_local=0
-    
+    linedensity=1
     
     for iter in range(args.epochs):
-        # if iter % 50 == 0 :
-        #     TurnFlag=not TurnFlag
-        #     print(TurnFlag)
         
-        if args.density_fix < initial_fix   :
-            args.density_fix+=args.density_gr#固定率线性增加
+        
+        # if args.density_fix < initial_fix   :
+        #     args.density_fix+=args.density_gr#固定率线性增加
             # else:
             #     args.density_fix-=args.density_gr#固定率线性衰减
-        
-        if args.density_local > 0  :
-             args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
+        if linedensity>0.5 :
+            linedensity-=args.density_dr
+        # args.density_local=linedensity*linedensity+(1-linedensity)
+        args.density_local=linedensity*linedensity+1.5*(1-linedensity)
+        # if iter <=150:
+        #     args.density_local=0.00001777777778*iter*iter-0.00266666667*iter+1
+        # else:
+        #     args.density_local=1
+
+        # if args.density_local > 0  and iter < 76:
+        #     args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
+        # if iter > 75 and iter<152:
+        #     args.density_local=args.density_local+args.density_dr
         # if sparse_learning_epoch > 0 and args.density_fix >= 0.5:
         #     args.density_fix-=args.density_gr
         #     args.density_local+=args.density_dr
@@ -123,7 +131,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
                 decay = CosineDecay(args.death_rate, len(train_loader)*(args.epochs*args.multiplier))        #稀疏率，训练总步数 计算衰减率
                 mask = Masking(rand_indices_dic,optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth,
                            redistribution_mode=args.redistribution, args=args,train_loader=train_loader)
-                mask.add_module(net_local, sparse_init=args.sparse_init, density=args.density_local)
+                #mask.add_module(net_local, sparse_init=args.sparse_init, density=1)#临时不剪枝
+                masksdic_local= mask.get_masks()
                 
                 # if densitys_get :
                 #     densitys = mask.get_densitys()
@@ -139,8 +148,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
                 #print(densitys)
                 
                 flag=False
-            
-            local = LocalUpdate_FedAvg(args=args, dataset=dataset_train, idxs=dict_users[idx])
+            #print(masksdic_local)
+            local = LocalUpdate_FedAvg(masksdic_local,args=args, dataset=dataset_train, idxs=dict_users[idx])
 
             w = local.train(net=net_local)#返回参数状态字典
             if iter % 5 == 1 and flag2:
@@ -159,8 +168,12 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         else:
             w_glob = AggregationMut(w_locals, lens,w_masks)
 
+        
+
         # copy weight to net_glob
         net_glob.load_state_dict(w_glob)
+
+        mask.add_module(net_glob, sparse_init=args.sparse_init, density=args.density_local)
 
         #item_acc = test(net_glob, dataset_test, args)
 
@@ -406,6 +419,7 @@ if __name__ == '__main__':
                 print(k)
                 num_elements = masksdic[k].numel()
                 rand_indices_dic[k] = torch.randperm(num_elements)
+            print (rand_indices_dic)
  
 
 
