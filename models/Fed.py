@@ -42,7 +42,7 @@ def Aggregation(w, lens):
 
 
 
-def AggregationMut(w, lens,w_masks):#w 包含m个设备状态字典的列表
+def AggregationMut(w, lens,w_masks):#w 包含m个设备状态字典的列表       几个设备有参数就除以几     没有带权重，
     w_avg = None
     w_mask_sum={}
     for i in range(0,len(w)):
@@ -52,7 +52,7 @@ def AggregationMut(w, lens,w_masks):#w 包含m个设备状态字典的列表
         for k in w[i].keys():
                 w_mask_sum[k] += torch.where(w_masks[i][k] != 0, torch.tensor(1),torch.tensor(0))#零一化，叠加到mask上
     for k in w_mask_sum.keys():
-                w_mask_sum[k] = torch.where( w_mask_sum[k] == 0, torch.tensor(1),w_mask_sum[k])#避免出现全零的情况，否则0/0
+                w_mask_sum[k] = torch.where( w_mask_sum[k] == 0, torch.tensor(1),w_mask_sum[k])#避免出现全零的情况，否则0/0       
     # for k in w[i].keys():
     #    print(k)            
     #    print(w_mask_sum[k])

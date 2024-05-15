@@ -35,8 +35,11 @@ def get_densitys(model):
         densitys[name]=(weight!=0).sum().item()/weight.numel()
         total_size += weight.numel()
         sparse_size += (weight != 0).sum().int().item()
+        #print(name+'___'+str(densitys[name]))
+        
     Total_density=sparse_size / total_size
     #print('Total Model parameters:', total_size)
+   
     print('Total parameters under sparsity level of {0}: {1}'.format(args.density_local, sparse_size / total_size))
     return Total_density
 
@@ -59,6 +62,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     #args.density_local=0
     linedensity=1
     
+    
+
     for iter in range(args.epochs):
         
         
@@ -66,15 +71,30 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         #     args.density_fix+=args.density_gr#固定率线性增加
             # else:
             #     args.density_fix-=args.density_gr#固定率线性衰减
-        if linedensity>0.5 :
-            linedensity-=args.density_dr
-        # args.density_local=linedensity*linedensity+(1-linedensity)
-        args.density_local=linedensity*linedensity+1.5*(1-linedensity)
-        # if iter <=150:
-        #     args.density_local=0.00001777777778*iter*iter-0.00266666667*iter+1
+        # if linedensity>0.5 :
+        #     linedensity-=args.density_dr
+        # # args.density_local=linedensity*linedensity+(1-linedensity)
+        # args.density_local=linedensity*linedensity+1.5*(1-linedensity)
+        
+            #args.density_local=0.00001777777778*iter*iter-0.00266666667*iter+1
+            #args.density_local=0.00008*iter*iter-0.008*iter+1
+        #pythonargs.density_local=0.00002*iter*iter-0.002*iter+1
+        args.density_local=   0.00000277777*iter*iter     -0.00166666666*iter + 1
+        #args.density_local=0.5
+        #args.density_local=  0.000012*iter*iter-0.0012*iter+1
+        #args.density_local=      0.0000025 *iter*iter     -0.000625*iter  + 1.0140625
+        if args.density_local>1:
+         
+        # if iter<50:
+        #     args.density_local=0.975
+        # elif iter<101:
+        #     args.density_local=0.97
+        # elif iter<151:
+        #     args.density_local=0.99 
+        #     args.lr=0.02
         # else:
-        #     args.density_local=1
-
+            args.density_local=1
+        
         # if args.density_local > 0  and iter < 76:
         #     args.density_local=args.density_local-args.density_dr #稀疏率线性衰减
         # if iter > 75 and iter<152:
@@ -102,8 +122,9 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
         #optimizer = torch.optim.SGD(net_glob.parameters(), lr=self.args.lr, momentum=self.args.momentum)
 
 
-        flag = True
-        flag2= True
+        # flag = True
+        # flag2= True
+        function_executed=False
         for idx in idxs_users:
             
             # print('准备剪枝')
@@ -131,32 +152,38 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
                 decay = CosineDecay(args.death_rate, len(train_loader)*(args.epochs*args.multiplier))        #稀疏率，训练总步数 计算衰减率
                 mask = Masking(rand_indices_dic,optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth,
                            redistribution_mode=args.redistribution, args=args,train_loader=train_loader)
-                #mask.add_module(net_local, sparse_init=args.sparse_init, density=1)#临时不剪枝
+                #mask.add_module(net_local, sparse_init=args.sparse_init, density=args.density_local)
                 masksdic_local= mask.get_masks()
-                
+                #print(masksdic_local)
                 # if densitys_get :
                 #     densitys = mask.get_densitys()
                 #     densitys_get = True
                     
             sys.stdout = original_stdout
             w_masks.append(copy.deepcopy(net_local.state_dict()))#剪完枝尚未训练的模型参数
-            #get_densitys(net_local)
-            if iter % 5 == 1 and flag:
-                print("聚合前")
-                #Total_density_B=get_densitys(net_local)#修复bug 
-                #wandb.log({"Total_density_B":Total_density_B})
-                #print(densitys)
+            
+
+
+            if not function_executed:
+                 # 调用函数
+                get_densitys(net_local)
+                function_executed = True
+            # if iter % 5 == 1 and flag:
+            #     print("聚合前")
+            #     #Total_density_B=get_densitys(net_local)#修复bug 
+            #     #wandb.log({"Total_density_B":Total_density_B})
+            #     #print(densitys)
                 
-                flag=False
-            #print(masksdic_local)
+            #     flag=False
+            # #print(masksdic_local)
             local = LocalUpdate_FedAvg(masksdic_local,args=args, dataset=dataset_train, idxs=dict_users[idx])
 
             w = local.train(net=net_local)#返回参数状态字典
-            if iter % 5 == 1 and flag2:
-                #get_densitys(net_local)
-                #density_localtrain=get_densitys(net_local)
-                #wandb.log({"density_ALocaltrain":density_localtrain})
-                flag2=False
+            # if iter % 5 == 1 and flag2:
+            #     #get_densitys(net_local)
+            #     #density_localtrain=get_densitys(net_local)
+            #     #wandb.log({"density_ALocaltrain":density_localtrain})
+            #     flag2=False
             w_locals.append(copy.deepcopy(w))   
             lens.append(len(dict_users[idx]))
             
@@ -172,8 +199,8 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
 
         # copy weight to net_glob
         net_glob.load_state_dict(w_glob)
-
-        mask.add_module(net_glob, sparse_init=args.sparse_init, density=args.density_local)
+        if args.sparse:
+            mask.add_module(net_glob, sparse_init=args.sparse_init, density=args.density_local)
 
         #item_acc = test(net_glob, dataset_test, args)
 
@@ -183,7 +210,7 @@ def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
             
             print("聚合后")
             #Total_density_A=get_densitys(net_glob)
-            wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local,"lr":args.lr,"density_fix":args.density_fix,})#"Total_density":Total_density_A
+            wandb.log({"epoch":iter,"acc": item_acc,"density_local":args.density_local,"lr":args.lr})#"Total_density":Total_density_A
             #print(densitys)
             
     
@@ -350,11 +377,11 @@ if __name__ == '__main__':
     elif 'resnet18' in args.model:
         net_glob = ResNet18_cifar10(num_classes = args.num_classes)
         if args.finetuning :
-            net_glob.load_state_dict(torch.load('./output/5/0.5/cifar10_FedAvg_resnet18_test_model_1000_lr_0.03_2024_04_11_07_31_31_frac_0.1.txt'))#非独立三分稀疏1000轮
-            #net_glob.load_state_dict(torch.load('./output/5/0.5/cifar10_FedAvg_resnet18_test_model_250_lr_0.03_2024_04_11_04_41_24_frac_0.1.txt'))#非独立半稀疏750轮0.6
-            #net_glob.load_state_dict(torch.load('./output/5/0.5/cifar10_FedAvg_resnet18_test_model_500_lr_0.03_2024_04_11_03_44_02_frac_0.1.txt'))#非独立半稀疏500轮0.6
+            #net_glob.load_state_dict(torch.load('./output/5/0.5/cifar10_FedAvg_resnet18_test_model_1000_lr_0.03_2024_04_11_07_31_31_frac_0.1.txt'))#非独立三分稀疏1000轮
+            net_glob.load_state_dict(torch.load('./output/5/0.5/cifar10_FedAvg_resnet18_test_model_300_lr_0.05_2024_05_02_22_03_18_frac_0.1.txt'))#
+            # net_glob.load_state_dict(torch.load('./output/5/0.5/cifar10_FedAvg_resnet18_test_model_800_lr_0.05_2024_05_02_07_57_42_frac_0.1.txt'))#
             
-            net_glob.load_state_dict(torch.load('./output/5/0.5/noniid_avgbase_cifar10_FedAvg_resnet18_test_model_250_lr_0.03_2024_04_09_18_03_12_frac_0.1.txt')) #非独立AvgBase
+            #net_glob.load_state_dict(torch.load('./output/5/0.5/noniid_avgbase_cifar10_FedAvg_resnet18_test_model_250_lr_0.03_2024_04_09_18_03_12_frac_0.1.txt')) #非独立AvgBase
             #net_glob.load_state_dict(torch.load('./output/5/0.5/cifar10_FedAvg_resnet18_test_model_250_lr_0.05_2024_04_10_11_58_03_frac_0.1.txt'))    #非独立AvgBase微调250轮0.6
     elif 'resnet50' in args.model:
         net_glob = ResNet50_cifar10(num_classes = args.num_classes)
@@ -371,12 +398,12 @@ if __name__ == '__main__':
     
     net_glob.to(args.device)
 
-    if args.optimizer == 'sgd':
-        optimizer = torch.optim.SGD(net_glob.parameters(), lr=args.lr, momentum=args.momentum)
-    elif args.optimizer == 'adam':
-        optimizer = torch.optim.Adam(net_glob.parameters(), lr=args.lr)
-    elif args.optimizer == 'adaBelief':
-        optimizer = AdaBelief(net_glob.parameters(), lr=args.lr)
+    # if args.optimizer == 'sgd':
+    #     optimizer = torch.optim.SGD(net_glob.parameters(), lr=args.lr, momentum=args.momentum)
+    # elif args.optimizer == 'adam':
+    #     optimizer = torch.optim.Adam(net_glob.parameters(), lr=args.lr)
+    # elif args.optimizer == 'adaBelief':
+    #     optimizer = AdaBelief(net_glob.parameters(), lr=args.lr)
     optimizer = torch.optim.SGD(net_glob.parameters(), lr=args.lr, momentum=args.momentum)
             
     train_loader = torch.utils.data.DataLoader(
@@ -395,11 +422,11 @@ if __name__ == '__main__':
     masksdic={}
     rand_indices_dic={}
     if args.sparse:
-                # decay = CosineDecay(args.death_rate, len(train_loader)*(args.epochs*args.multiplier))        #稀疏率，训练总步数 计算衰减率
-                # mask = Masking(optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth,
-                #            redistribution_mode=args.redistribution, args=args,train_loader=train_loader)
-                # mask.add_module(net_glob, sparse_init=args.sparse_init, density=args.density)
-            masks={}
+            # decay = CosineDecay(args.death_rate, len(train_loader)*(args.epochs*args.multiplier))        #稀疏率，训练总步数 计算衰减率
+            # mask = Masking(optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth,
+            #                redistribution_mode=args.redistribution, args=args,train_loader=train_loader)
+            # mask.add_module(net_glob, sparse_init=args.sparse_init, density=args.density)
+            # masks={}
             for name, tensor in net_glob.named_parameters():
                 if 'bias' not in name:
                     masksdic[name] = torch.zeros_like(tensor, dtype=torch.float32, requires_grad=False).cuda(args.gpu)
@@ -408,10 +435,10 @@ if __name__ == '__main__':
                 if isinstance(module, nn.BatchNorm2d) or isinstance(module, nn.BatchNorm1d):
                     if name in masksdic:
                         masksdic.pop(name)
-                        print('pop'+name)
+                        # print('pop'+name)
                     elif name + '.weight' in masksdic:
                         masksdic.pop(name + '.weight')
-                        print('pop'+name+'.weight')
+                        #print('pop'+name+'.weight')
             
             
 
@@ -419,7 +446,7 @@ if __name__ == '__main__':
                 print(k)
                 num_elements = masksdic[k].numel()
                 rand_indices_dic[k] = torch.randperm(num_elements)
-            print (rand_indices_dic)
+            # #print (rand_indices_dic)
  
 
 

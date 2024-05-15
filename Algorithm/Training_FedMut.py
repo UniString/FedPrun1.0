@@ -73,7 +73,7 @@ def FedMut(args, net_glob, dataset_train, dataset_test, dict_users):
     lr_decay=1
     initial_lr = args.lr
     #args.lr = initial_lr * (lr_decay ** (iter // 100))
-
+    
 
     m = max(int(args.frac * args.num_users), 1)
     for i in range(m):
@@ -81,14 +81,17 @@ def FedMut(args, net_glob, dataset_train, dataset_test, dict_users):
     
     delta_list = []
     max_rank = 0
-
+    
     w_old = copy.deepcopy(net_glob.state_dict())#复制旧参数
 
     #w_old_s1 = copy.deepcopy(net_glob.state_dict())
 
     for iter in range(args.epochs):
-        args.lr = initial_lr * (0.6 ** (iter // 100))
-
+        args.radius=     -0.0008*iter*iter   +  0.16 *iter+  1
+        if args.radius<2:
+            args.radius=2
+        # args.lr = initial_lr * (0.6 ** (iter // 100))
+        args.lr=0.05
         w_old = copy.deepcopy(net_glob.state_dict())
         print('*' * 80)
         print('Round {:3d}'.format(iter))
@@ -155,7 +158,8 @@ def FedMut(args, net_glob, dataset_train, dataset_test, dict_users):
         if iter % 3 == 2:
             item_acc = test(net_glob, dataset_test, args)
             acc.append(item_acc)
-            wandb.log({"epoch":iter,"acc": item_acc})
+           # wandb.log({"epoch":iter,"acc": item_acc})
+            wandb.log({"epoch":iter,"acc": item_acc,"radius":args.radius,"lr":args.lr})
 
         w_delta = FedSub(w_glob, w_old, 1.0)
         rank = delta_rank(args,w_delta)

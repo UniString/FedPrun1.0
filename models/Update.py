@@ -38,13 +38,13 @@ class LocalUpdate_FedAvg(object):
         net.train()
         # train and update
 
-        #冻结参数
+        # #冻结参数
         # params_to_update = []
         # for name, param in net.named_parameters():
         #     if param.requires_grad and not torch.all(param == 0):
         #         params_to_update.append(param)
         if self.args.optimizer == 'sgd':
-            optimizer = torch.optim.SGD(net.parameters(), lr=self.args.lr, momentum=self.args.momentum)
+            optimizer = torch.optim.SGD(net.parameters(), lr=self.args.lr, momentum=self.args.momentum,weight_decay=self.args.l2)
             #optimizer = torch.optim.SGD(params_to_update, lr=self.args.lr, momentum=self.args.momentum)  #对未冻结参数进行更新
         # elif self.args.optimizer == 'adam':
         #     optimizer = torch.optim.Adam(net.parameters(), lr=self.args.lr)
@@ -62,9 +62,9 @@ class LocalUpdate_FedAvg(object):
                 log_probs = net(images)['output']
                 loss = self.loss_func(log_probs, labels)
                 loss.backward()
-                for name, tensor in net.named_parameters():#冻结参数
-                    if name in self.masksdic_local:
-                        tensor.grad = tensor.grad*self.masksdic_local[name]
+                # for name, tensor in net.named_parameters():#冻结参数,清零剪枝参数梯度
+                #     if name in self.masksdic_local:
+                #         tensor.grad = tensor.grad*self.masksdic_local[name]
 
                 optimizer.step()
 

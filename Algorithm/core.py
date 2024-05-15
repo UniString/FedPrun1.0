@@ -51,6 +51,7 @@ def select_elements_uniformly(tensor, ratio):
     
     return multi_dim_indices
 
+#def select_elements_uniformly(tensor, ratio):
 
 
 
@@ -168,7 +169,9 @@ class Masking(object):
 
             
             total_sparse_params = total_sparse_params - self.masks['conv1.weight'].numel()
+            #total_sparse_params = total_sparse_params - self.masks['features.0.weight'].numel()
             self.masks.pop('conv1.weight')
+            #self.masks.pop('features.0.weight')
 
             if self.density < 0.2:
                 total_sparse_params = total_sparse_params - self.masks['fc.weight'].numel() * 0.2
@@ -348,6 +351,7 @@ class Masking(object):
         self.module = module
         for name, tensor in module.named_parameters():
             self.names.append(name)
+            print(name)
             self.masks[name] = torch.zeros_like(tensor, dtype=torch.float32, requires_grad=False).cuda(self.args.gpu)
 
         #print('Removing biases...')
@@ -406,12 +410,14 @@ class Masking(object):
         for module in self.modules:
             for name, tensor in module.named_parameters():
                 if name in self.masks:
+                    self.masks[name][self.masks[name]==0]=0.9
                     #tensor = tensor.to('cpu')
                     if self.args.helf_sparse:
-                        mask= select_elements_by_ratio(self.masks[name],self.args.density_fix,name,self.rand_indices_dic)
+                        #mask= select_elements_by_ratio(self.masks[name],self.args.density_fix,name,self.rand_indices_dic)
                         #mask = torch.arange(self.masks[name].numel()) % 2 == 0# 首先创建一个和 self.masks[name] 元素数量相同的一维mask
                         #mask = mask.view(self.masks[name].shape)# 然后将这个一维mask reshape成和 self.masks[name] 相同的形状
-                        self.masks[name][mask] = 1.0   #固定一半参数
+                        #self.masks[name][mask] = 1.0   #固定参数
+                        self.masks[name][:len(self.masks[name])//2] = 1.0  
                         
                     tensor.data = tensor.data*self.masks[name]    
                     #tensor = tensor.to('cuda:0')

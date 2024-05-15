@@ -58,6 +58,7 @@ def args_parser():
     parser.add_argument('--sim_type', type=str, default='L1', help='Cluster Sampling: cosine or L1 or L2')
     parser.add_argument('--p', type=float, default=2.0, help='power for AT')
     parser.add_argument('--trans_beta', type=int, default=500, help='beta of FedAttTrans')
+    parser.add_argument('--l2', type=float, default=5.0e-4)
 
     # FedMut
     parser.add_argument('--radius', type=float, default=4.0)
